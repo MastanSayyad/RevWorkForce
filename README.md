@@ -1,6 +1,6 @@
 
 <div align="center">
-<img width="400"alt="Rev WorkForce logo" src="https://github.com/user-attachments/assets/13890759-e845-401c-aa7b-07dc44444eeb" />
+<img width="350"alt="Rev WorkForce logo" src="https://github.com/user-attachments/assets/13890759-e845-401c-aa7b-07dc44444eeb" />
 
 
 ### 🌟 Welcome to RevWorkForce 🌟
