@@ -11,7 +11,13 @@
 </div>
 
 ##  Welcome to RevWorkForce 
-Rev Workforce is a **console-based** Human Resource Management (HRM) application designed to streamline **employee management, leave tracking, and performance review processes**. The system supports three user roles: **Employees, Managers, and Admins**, each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
+Rev Workforce is a **console-based** Human Resource Management (HRM) application designed to streamline **employee management, leave tracking, and performance review processes**. 
+The system supports three user roles: 
+- **Employees**
+- **Managers**
+- **Admins**
+
+Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
 
 > This project is part of Revature training program.
 
