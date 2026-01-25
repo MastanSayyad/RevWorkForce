@@ -47,6 +47,3 @@ application.properties
 *.zip
 *.tar.gz
 *.rar
-
-
-temp.d
