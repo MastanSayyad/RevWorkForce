@@ -1,0 +1,17 @@
+# db.properties is a configuration file used to store database and application settings outside of Java code.
+# Template: 
+
+db.url=jdbc:oracle:thin:@//localhost:1521/XEPDB1
+db.username=your_username_here
+db.password=your_password_here
+db.driver=oracle.jdbc.driver.OracleDriver
+
+# Connection Pool Settings
+db.pool.initialSize=5
+db.pool.maxActive=10
+db.pool.maxIdle=5
+db.pool.minIdle=2
+
+# Application Settings
+app.session.timeout=30
+app.password.salt.rounds=12
