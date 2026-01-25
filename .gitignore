@@ -48,5 +48,4 @@ application.properties
 *.tar.gz
 *.rar
 
-
-temp.d
+challenges-faced.md
