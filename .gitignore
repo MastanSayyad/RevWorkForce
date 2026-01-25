@@ -47,3 +47,5 @@ application.properties
 *.zip
 *.tar.gz
 *.rar
+
+challenges.md
