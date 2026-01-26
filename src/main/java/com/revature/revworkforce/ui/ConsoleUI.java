@@ -20,6 +20,7 @@ public class ConsoleUI {
     /**
      * Start the application
      */
+    
     public void start() {
         displayWelcome();
         
