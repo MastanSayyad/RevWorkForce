@@ -1,0 +1,18 @@
+# Application Information
+app.name=RevWorkForce
+app.version=1.0.0 # soon to be release
+app.description=HR Management System
+
+# Leave Configuration
+leave.casual.default=12
+leave.sick.default=10
+leave.paid.default=15
+leave.privilege.default=5
+
+# Performance Review Configuration
+review.rating.min=1
+review.rating.max=5
+
+# Date Format
+date.format=yyyy-MM-dd
+datetime.format=yyyy-MM-dd HH:mm:ss
