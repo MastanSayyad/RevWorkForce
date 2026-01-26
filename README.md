@@ -1,6 +1,6 @@
 
 <div align="center">
-<img width="350"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/RevWorkForce-Logo.png" />
+<img width="350"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Logo.png" />
 
   <br>
 <br>
