@@ -1,4 +1,19 @@
 desc announcements;
+
+desc employee_roles;
+desc leave_balances WHERE employee_id = 'EMP001';
+desc leave_types;
+desc employees;
+desc audit_logs;
+desc departments;
+desc designations;
+desc employees;
+desc goals;
+desc holidays;
+desc performance_reviews;
+desc roles;
+
+
 select sequence_name from user_sequences;
 select table_name from user_tables;
 
@@ -36,4 +51,27 @@ on e.designation_id = d.designation_id
 join employee_roles er on e.employee_id = er.employee_id
 join roles on er.role_id = roles.role_id;
 
+
+
 select * from employee_roles;
+SELECT * FROM leave_balances WHERE employee_id = 'EMP001';
+select * from leave_types;
+select * from employees;
+select * from audit_logs;
+select * from departments;
+select * from designations;
+select * from employees;
+select * from goals;
+select * from holidays;
+select * from performance_reviews;
+select * from roles;
+
+
+select r.role_name, count(er.employee_id) as employee_count
+FROM roles r
+LEFT JOIN employee_roles er ON r.role_id = er.role_id
+group by r.role_name;
+
+
+
+
