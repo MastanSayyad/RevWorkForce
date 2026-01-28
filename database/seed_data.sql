@@ -100,6 +100,7 @@ COMMIT;
 -- ============================================
 -- Note: Password for all users is 'password123'
 -- Hashed using BCrypt: $2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYVKSVN5kRu
+-- $2a$12$mBMdAJI53txYnDAbxJmkdudBCRm7JOaStt2./RViZL5Hyv4Hx74gu
 
 -- Admin User
 INSERT INTO employees (employee_id, first_name, last_name, email, phone, address, 
