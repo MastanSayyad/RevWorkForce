@@ -13,6 +13,7 @@ import com.revature.revworkforce.model.LeaveType;
  */
 public interface LeaveDAO {
     
+	
     // Leave Application Operations
     int applyLeave(LeaveApplication leaveApplication) throws SQLException;
     boolean updateLeaveApplication(LeaveApplication leaveApplication) throws SQLException;
