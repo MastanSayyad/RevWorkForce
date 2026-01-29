@@ -157,6 +157,30 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
     
     @Override
+    public boolean updatePassword(String employeeId, String passwordHash) throws SQLException {
+
+        String sql = "UPDATE employees SET password_hash = ?, updated_at = CURRENT_TIMESTAMP " +
+                     "WHERE employee_id = ?";
+
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, passwordHash);
+            pstmt.setString(2, employeeId);
+
+            int rowsUpdated = pstmt.executeUpdate();
+
+            logger.info("Password update rows affected: {}", rowsUpdated);
+            return rowsUpdated == 1;
+
+        } catch (SQLException e) {
+            logger.error("Error updating password for employee {}", employeeId, e);
+            throw e;
+        }
+    }
+
+    
+    @Override
     public boolean updateProfile(Employee employee) throws SQLException {
         logger.debug("Updating employee profile: {}", employee.getEmployeeId());
         
