@@ -105,4 +105,6 @@ public interface LeaveService {
      * @return Number of working days
      */
     int calculateWorkingDays(LocalDate startDate, LocalDate endDate);
+    
+    
 }
