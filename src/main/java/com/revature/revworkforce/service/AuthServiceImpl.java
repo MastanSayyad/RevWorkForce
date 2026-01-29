@@ -112,7 +112,10 @@ public class AuthServiceImpl implements AuthService {
             
             // Update password in database
             employee.setPasswordHash(newPasswordHash);
-            boolean updated = employeeDAO.updateEmployee(employee);
+//            boolean updated = employeeDAO.updateEmployee(employee);
+            
+            boolean updated = employeeDAO.updatePassword(employeeId, newPasswordHash);
+
             
             if (updated) {
                 logger.info("Password changed successfully for employee: {}", employeeId);
