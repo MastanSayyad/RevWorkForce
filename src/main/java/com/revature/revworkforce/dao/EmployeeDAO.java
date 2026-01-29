@@ -45,4 +45,7 @@ public interface EmployeeDAO {
     boolean isEmailExists(String email) throws SQLException;
     boolean isEmployeeIdExists(String employeeId) throws SQLException;
     int getTotalEmployeeCount() throws SQLException;
+    
+    boolean updatePassword(String employeeId, String passwordHash) throws SQLException;
+
 }
