@@ -53,6 +53,22 @@ revworkforce/
 -  Input validation
 -  JUnit testing (60%+ coverage)
 
+## Architecture
+
+### Entity Relationship Diagram (ERD)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
+
+### Application Architecture
+![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
+
+## System Design
+The application follows a layered architecture pattern:
+- **Presentation Layer**: Console-based UI (EmployeeMenu, ManagerMenu, AdminMenu)
+- **Service Layer**: Business logic implementation
+- **DAO Layer**: Data Access Objects for database operations
+- **Util Layer**: Utility classes for validation, security, logging
+- **Database Layer**: Oracle 19c with normalized schema
+
 ## Prerequisites
 - JDK 11 or higher
 - Oracle Database 19c/XE
