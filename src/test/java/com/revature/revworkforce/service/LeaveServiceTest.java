@@ -16,6 +16,9 @@ import com.revature.revworkforce.model.LeaveType;
 /**
  * Test class for LeaveService
  */
+
+import org.junit.jupiter.api.Disabled;
+@Disabled("Integration test – requires database")
 public class LeaveServiceTest {
     
     private LeaveService leaveService;

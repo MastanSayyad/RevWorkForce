@@ -17,6 +17,9 @@ import com.revature.revworkforce.model.Employee;
 /**
  * Test class for EmployeeService
  */
+
+import org.junit.jupiter.api.Disabled;
+@Disabled("Integration test – requires database")
 public class EmployeeServiceTest {
     
     private EmployeeService employeeService;
