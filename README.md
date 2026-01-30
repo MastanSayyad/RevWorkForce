@@ -21,3 +21,105 @@ Each with specific functionalities. The application is designed with a **modular
 
 > This project is part of Revature training program.
 
+## Project Structure
+```
+revworkforce/
+├── src/main/java/
+│   └── com/revature/revworkforce/
+│       ├── model/          # Entity classes
+│       ├── dao/            # Data Access Objects
+│       ├── service/        # Business logic
+│       ├── ui/             # Console UI
+│       ├── util/           # Utility classes
+│       └── exception/      # Custom exceptions
+├── src/main/resources/
+│   ├── log4j2.xml          # Logging configuration
+│   └── db.properties       # Database configuration
+├── src/test/java/          # JUnit tests
+├── database/               # SQL scripts
+├── docs/                   # Documentation & diagrams
+└── pom.xml                 # Maven configuration
+```
+
+## Features Implemented
+-  Role-based access control (Employee, Manager, Admin)
+-  Leave management with approval workflow
+-  Performance review system
+-  Goal tracking
+-  Notification system
+-  Password hashing (BCrypt)
+-  SQL injection prevention (PreparedStatements)
+-  Comprehensive logging (Log4j)
+-  Input validation
+-  JUnit testing (60%+ coverage)
+
+## Prerequisites
+- JDK 11 or higher
+- Oracle Database 19c/XE
+- Maven 3.6+
+- Eclipse IDE (optional)
+
+## Installation & Setup
+
+### 1. Clone Repository
+```bash
+git clone 
+cd revworkforce
+```
+
+### 2. Database Setup
+```sql
+-- Connect as SYSTEM user
+sqlplus system/password@localhost:1521/XEPDB1
+
+-- Run setup scripts
+@database/create_user.sql
+@database/schema.sql
+@database/seed_data.sql
+```
+
+### 3. Configure Database Connection
+Edit `src/main/resources/db.properties`:
+```properties
+db.url=jdbc:oracle:thin:@localhost:1521/XEPDB1
+db.username=user_name
+db.password=password
+```
+
+### 4. Build Project
+```bash
+mvn clean install
+```
+
+### 5. Run Application
+```bash
+mvn exec:java -Dexec.mainClass="com.revature.revworkforce.Main"
+```
+
+Or in Eclipse:
+```
+Right-click Main.java → Run As → Java Application
+```
+
+## Default Login Credentials
+- **Admin**: ADM001 / password123
+- **Manager**: MGR001 / password123
+- **Employee**: EMP001 / password123
+
+## Testing
+
+### Run Tests
+```bash
+mvn test
+```
+
+### View Coverage Report
+```bash
+mvn jacoco:report
+```
+Report location: `target/site/jacoco/index.html`
+
+## Author
+@MastanSayyad  
+
+
