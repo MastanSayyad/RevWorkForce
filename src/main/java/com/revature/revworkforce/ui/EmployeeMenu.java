@@ -3,6 +3,7 @@ package com.revature.revworkforce.ui;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -273,10 +274,12 @@ public class EmployeeMenu {
             return;
         }
         
-        // Filter and display only pending
-        applications = applications.stream()
-            .filter(app -> LeaveApplication.STATUS_PENDING.equals(app.getStatus()))
-            .toList();
+
+     // Filter and display only pending
+     applications = applications.stream()
+         .filter(app -> LeaveApplication.STATUS_PENDING.equals(app.getStatus()))
+         .collect(Collectors.toList());
+
         
         if (applications.isEmpty()) {
             MenuHelper.printInfo("No pending leave applications to cancel.");
