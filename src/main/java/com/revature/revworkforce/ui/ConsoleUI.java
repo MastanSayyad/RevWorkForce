@@ -68,7 +68,7 @@ public class ConsoleUI {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         System.out.println("║                                                            ║");
         System.out.println("║            REVWORKFORCE - HR MANAGEMENT SYSTEM             ║");
-        System.out.println("║                      Version 1.0                           ║");
+        System.out.println("║                      Version 1.1.0                         ║");
         System.out.println("║                                                            ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
         System.out.println();
