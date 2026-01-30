@@ -136,6 +136,6 @@ mvn jacoco:report
 Report location: `target/site/jacoco/index.html`
 
 ## Author
-![MastanSayyad](github.com/MastanSayyad)
+[MastanSayyad](github.com/MastanSayyad)
 
 
