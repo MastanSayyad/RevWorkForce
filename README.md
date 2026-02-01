@@ -5,9 +5,11 @@
   <br>
 <br>
 
-[![Stars](https://img.shields.io/github/stars/MastanSayyad/RevWorkForce?style=social)](https://github.com/MastanSayyad/RevWorkForce/stargazers)
-[![Forks](https://img.shields.io/github/forks/MastanSayyad/RevWorkForce?style=social)](https://github.com/MastanSayyad/RevWorkForce/network/members) [![CI](https://github.com/mastansayyad/revworkforce/actions/workflows/maven.yml/badge.svg)](https://github.com/MastanSayyad/RevWorkForce/actions) [![Issues](https://img.shields.io/badge/60%20Issues-View-red)](https://github.com/MastanSayyad/RevWorkForce/issues)
- [![Pull%20Requests](https://img.shields.io/badge/45%20Pull%20Requests-View-purple)](https://github.com/MastanSayyad/RevWorkForce/pulls) [![Release](https://img.shields.io/badge/Version-v1.1.0-white)](https://github.com/MastanSayyad/RevWorkForce/releases)
+
+[![CI](https://github.com/mastansayyad/revworkforce/actions/workflows/maven.yml/badge.svg)](https://github.com/MastanSayyad/RevWorkForce/actions)
+[![Issues](https://img.shields.io/badge/Issues-60-blue?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/issues)
+[![Pull Requests](https://img.shields.io/badge/Pull%20Requests-45-purple?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/pulls?q=is%3Apr+is%3Aclosed)
+[![Release](https://img.shields.io/badge/Version-v1.1.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 
 
 
