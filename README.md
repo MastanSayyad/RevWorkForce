@@ -1,3 +1,4 @@
+[![Release](https://img.shields.io/badge/Version-v1.1.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 
 <div align="center">
 <img width="350"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Logo.png" />
@@ -8,7 +9,6 @@
 [![Issues](https://img.shields.io/badge/Issues-60-blue?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/issues)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-45-purple?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/pulls?q=is%3Apr+is%3Aclosed)
 [![CI](https://github.com/mastansayyad/revworkforce/actions/workflows/maven.yml/badge.svg)](https://github.com/MastanSayyad/RevWorkForce/actions)
-[![Release](https://img.shields.io/badge/Version-v1.1.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 [![Documentation](https://img.shields.io/badge/Documentation-Read%20Docs-blue?logo=read-the-docs&style=flat)](https://github.com/MastanSayyad/RevWorkForce#readme)
 
 
