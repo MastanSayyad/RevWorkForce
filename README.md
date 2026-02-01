@@ -7,7 +7,8 @@
 
 [![Stars](https://img.shields.io/github/stars/MastanSayyad/RevWorkForce?style=social)](https://github.com/MastanSayyad/RevWorkForce/stargazers)
 [![Forks](https://img.shields.io/github/forks/MastanSayyad/RevWorkForce?style=social)](https://github.com/MastanSayyad/RevWorkForce/network/members) [![CI](https://github.com/mastansayyad/revworkforce/actions/workflows/maven.yml/badge.svg)](https://github.com/MastanSayyad/RevWorkForce/actions) [![Issues](https://img.shields.io/badge/60%20Issues-View-red)](https://github.com/MastanSayyad/RevWorkForce/issues)
- [![Pull%20Requests](https://img.shields.io/badge/45%20Pull%20Requests-View-purple)](https://github.com/MastanSayyad/RevWorkForce/pulls)
+ [![Pull%20Requests](https://img.shields.io/badge/45%20Pull%20Requests-View-purple)](https://github.com/MastanSayyad/RevWorkForce/pulls) [![Release](https://img.shields.io/badge/Version-v1.1.0-white)](https://github.com/MastanSayyad/RevWorkForce/releases)
+
 
 
 <!-- Java -->
