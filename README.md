@@ -144,16 +144,10 @@ mvn jacoco:report
 
 <img width="1919" height="485" alt="image" src="https://github.com/user-attachments/assets/82599e45-b28f-4b5f-8b94-55a10c3d5534" />
 
-
-## Project Author
-**Built and maintained by**
+## Author 
+**This Project is Built and maintained by**
 | Author  | GitHub | Linkedin | Contact |
 |---|---|---|---|
 | <a href="https://github.com/MastanSayyad"><img src="https://github.com/MastanSayyad.png" width="50" height="50" style="border-radius:50%;" alt="MastanSayyad"/></a> | <a href="https://github.com/MastanSayyad" style="text-decoration:none; color:inherit;"><b>MastanSayyad</b></a> | [mastan-sayyad](https://www.linkedin.com/in/mastan-sayyad/) | [sayyadmastan78@gmail.com](mailto:sayyadmastan78@gmail.com)|
 
-
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer" alt="Footer"/>
-</p>
 
