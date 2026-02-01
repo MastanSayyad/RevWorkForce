@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.revature.revworkforce.model.Announcement;
+import com.revature.revworkforce.model.AuditLog;
 import com.revature.revworkforce.model.Department;
 import com.revature.revworkforce.model.Designation;
 import com.revature.revworkforce.model.Employee;
@@ -20,6 +21,8 @@ import com.revature.revworkforce.service.NotificationService;
 import com.revature.revworkforce.service.NotificationServiceImpl;
 import com.revature.revworkforce.util.PasswordUtil;
 import com.revature.revworkforce.util.SessionManager;
+import com.revature.revworkforce.service.AuditService;
+import com.revature.revworkforce.service.AuditServiceImpl;
 
 /**
  * Admin Menu UI
@@ -32,14 +35,17 @@ public class AdminMenu {
     private EmployeeService employeeService;
     private LeaveService leaveService;
     private NotificationService notificationService;
+    private AuditService auditService;
     private ManagerMenu managerMenu;
-    
+
+    //Initialize in constructor
     public AdminMenu(Scanner scanner) {
-        this.scanner = scanner;
-        this.employeeService = new EmployeeServiceImpl();
-        this.leaveService = new LeaveServiceImpl();
-        this.notificationService = new NotificationServiceImpl();
-        this.managerMenu = new ManagerMenu(scanner);
+     this.scanner = scanner;
+     this.employeeService = new EmployeeServiceImpl();
+     this.leaveService = new LeaveServiceImpl();
+     this.notificationService = new NotificationServiceImpl();
+     this.auditService = new AuditServiceImpl(); 
+     this.managerMenu = new ManagerMenu(scanner);
     }
     
     public void display() {
@@ -89,6 +95,9 @@ public class AdminMenu {
                     case 10:
                         viewAllAnnouncements();
                         break;
+                    case 11:  // ADD THIS CASE
+                        viewAuditLogs();
+                        break;
                     case 0:
                         running = false;
                         MenuHelper.printInfo("Logging out...");
@@ -130,6 +139,7 @@ public class AdminMenu {
         System.out.println("SYSTEM MANAGEMENT");
         System.out.println("  9. Create Announcement");
         System.out.println(" 10. View All Announcements");
+        System.out.println(" 11. View Audit Logs");  
         System.out.println();
         System.out.println("  0. Logout");
         MenuHelper.printDivider();
@@ -448,4 +458,72 @@ public class AdminMenu {
                 MenuHelper.printDivider();
             }
         }
+        
+        private void viewAuditLogs() {
+         MenuHelper.printHeader("AUDIT LOGS");
+         
+         System.out.println("1. View All Audit Logs");
+         System.out.println("2. View Audit Logs by Employee");
+         System.out.println("3. View Audit Logs by Table");
+         System.out.println("4. View Recent Audit Logs");
+         System.out.println("0. Back");
+         
+         int choice = MenuHelper.getIntInput(scanner, "\nEnter your choice: ");
+         
+         List<AuditLog> logs = null;
+         
+         switch (choice) {
+             case 1:
+                 logs = auditService.getAllAuditLogs();
+                 break;
+             case 2:
+                 String employeeId = MenuHelper.getStringInput(scanner, "Enter Employee ID: ");
+                 logs = auditService.getAuditLogsByEmployee(employeeId);
+                 break;
+             case 3:
+                 String tableName = MenuHelper.getStringInput(scanner, "Enter Table Name: ");
+                 logs = auditService.getAuditLogsByTable(tableName);
+                 break;
+             case 4:
+                 int limit = MenuHelper.getIntInput(scanner, "Enter number of logs to view: ");
+                 logs = auditService.getRecentAuditLogs(limit);
+                 break;
+             case 0:
+                 return;
+             default:
+                 MenuHelper.printError("Invalid choice.");
+                 return;
+         }
+         
+         displayAuditLogs(logs);
         }
+
+        private void displayAuditLogs(List<AuditLog> logs) {
+         if (logs == null || logs.isEmpty()) {
+             MenuHelper.printInfo("No audit logs found.");
+             return;
+         }
+         
+         MenuHelper.printSubHeader("AUDIT LOGS");
+         System.out.printf("%-5s %-12s %-20s %-15s %-15s %-20s%n", 
+             "ID", "Employee", "Action", "Table", "Record ID", "Timestamp");
+         MenuHelper.printDivider();
+         
+         for (AuditLog log : logs) {
+             String timestamp = log.getCreatedAt() != null ? 
+                 log.getCreatedAt().toString().substring(0, 19) : "N/A";
+             
+             System.out.printf("%-5d %-12s %-20s %-15s %-15s %-20s%n",
+                 log.getLogId(),
+                 log.getEmployeeId() != null ? log.getEmployeeId() : "SYSTEM",
+                 log.getAction(),
+                 log.getTableName(),
+                 log.getRecordId() != null ? log.getRecordId() : "N/A",
+                 timestamp);
+         }
+         MenuHelper.printDivider();
+         System.out.println("Total Logs: " + logs.size());
+        }
+   }
+
+
