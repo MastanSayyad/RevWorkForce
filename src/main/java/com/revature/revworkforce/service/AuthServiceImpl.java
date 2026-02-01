@@ -18,9 +18,11 @@ public class AuthServiceImpl implements AuthService {
     
     private static final Logger logger = LogManager.getLogger(AuthServiceImpl.class);
     private EmployeeDAO employeeDAO;
+    private AuditService auditService; // for logger service
     
     public AuthServiceImpl() {
         this.employeeDAO = new EmployeeDAOImpl();
+        this.auditService = new AuditServiceImpl(); // for logger
     }
     
     @Override
@@ -42,23 +44,36 @@ public class AuthServiceImpl implements AuthService {
             
             if (employee == null) {
                 logger.warn("Login failed: Employee not found - {}", employeeId);
+                // Log failed login attempt - logger
+                auditService.logAction(employeeId, "LOGIN_FAILED", "employees", 
+                    employeeId, null, "Employee not found");
                 throw new AuthenticationException("Invalid employee ID or password");
             }
             
             // Check if employee is active
             if (!employee.isActive()) {
                 logger.warn("Login failed: Inactive account - {}", employeeId);
+                // Log failed login attempt 
+                auditService.logAction(employeeId, "LOGIN_FAILED", "employees", 
+                    employeeId, null, "Account inactive");
                 throw new AuthenticationException("Account is inactive. Please contact administrator.");
             }
             
             // Verify password
             if (!PasswordUtil.verifyPassword(password, employee.getPasswordHash())) {
                 logger.warn("Login failed: Invalid password - {}", employeeId);
+                // Log failed login attempt 
+                auditService.logAction(employeeId, "LOGIN_FAILED", "employees", 
+                    employeeId, null, "Invalid password");
                 throw new AuthenticationException("Invalid employee ID or password");
             }
             
             // Set session
             SessionManager.setCurrentUser(employee);
+            
+            // Log successful login 
+            auditService.logAction(employeeId, "LOGIN_SUCCESS", "employees", 
+                employeeId, null, "Successful login");
             
             logger.info("Login successful for employee: {}", employeeId);
             return employee;
@@ -104,6 +119,9 @@ public class AuthServiceImpl implements AuthService {
             // Verify current password
             if (!PasswordUtil.verifyPassword(currentPassword, employee.getPasswordHash())) {
                 logger.warn("Password change failed: Invalid current password - {}", employeeId);
+                // Log failed password change 
+                auditService.logAction(employeeId, "PASSWORD_CHANGE_FAILED", "employees", 
+                    employeeId, null, "Invalid current password");
                 throw new AuthenticationException("Current password is incorrect");
             }
             
@@ -112,12 +130,12 @@ public class AuthServiceImpl implements AuthService {
             
             // Update password in database
             employee.setPasswordHash(newPasswordHash);
-//            boolean updated = employeeDAO.updateEmployee(employee);
-            
-            boolean updated = employeeDAO.updatePassword(employeeId, newPasswordHash);
-
+            boolean updated = employeeDAO.updateEmployee(employee);
             
             if (updated) {
+                // Log successful password change 
+                auditService.logAction(employeeId, "PASSWORD_CHANGED", "employees", 
+                    employeeId, "***", "***");
                 logger.info("Password changed successfully for employee: {}", employeeId);
                 return true;
             }
@@ -146,6 +164,9 @@ public class AuthServiceImpl implements AuthService {
     public void logout() {
         Employee currentUser = SessionManager.getCurrentUser();
         if (currentUser != null) {
+            // Log logout 
+            auditService.logAction(currentUser.getEmployeeId(), "LOGOUT", "employees", 
+                currentUser.getEmployeeId(), null, "User logged out");
             logger.info("Logout: {}", currentUser.getEmployeeId());
             SessionManager.logout();
         }
