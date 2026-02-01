@@ -144,10 +144,36 @@ mvn jacoco:report
 
 <img width="1919" height="485" alt="image" src="https://github.com/user-attachments/assets/82599e45-b28f-4b5f-8b94-55a10c3d5534" />
 
-## Author 
-**This Project is Built and maintained by**
-| Author  | GitHub | Linkedin | Contact |
-|---|---|---|---|
-| <a href="https://github.com/MastanSayyad"><img src="https://github.com/MastanSayyad.png" width="50" height="50" style="border-radius:50%;" alt="MastanSayyad"/></a> | <a href="https://github.com/MastanSayyad" style="text-decoration:none; color:inherit;"><b>MastanSayyad</b></a> | [mastan-sayyad](https://www.linkedin.com/in/mastan-sayyad/) | [sayyadmastan78@gmail.com](mailto:sayyadmastan78@gmail.com)|
 
+## Author
+**This Project is Built and maintained by:** **[Mastan Sayyad](https://github.com/MastanSayyad)**
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th colspan="3">Contact / Reach Out</th>
+  </tr>
+  <tr>
+    <td align="center" >
+      <a href="https://github.com/MastanSayyad" target="_blank">
+        <img src="https://github.com/MastanSayyad.png" width="50" height="50" style="border-radius:50%;" alt="MastanSayyad"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/MastanSayyad" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-%23181717?style=flat&logo=github&logoColor=white" width="80" alt="GitHub"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://www.linkedin.com/in/mastan-sayyad/" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-%230077B5?style=flat&logo=linkedin&logoColor=white" width="80" alt="LinkedIn"/>
+      </a>
+    </td>
+    <td>
+      <a href="mailto:sayyadmastan78@gmail.com" target="_blank">
+        <img src="https://img.shields.io/badge/Email-%23D14836?style=flat&logo=gmail&logoColor=white" width="80" alt="Email"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
