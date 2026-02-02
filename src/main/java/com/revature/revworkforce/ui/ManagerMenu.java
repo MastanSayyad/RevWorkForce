@@ -63,21 +63,24 @@ public class ManagerMenu {
                         viewTeamMembers();
                         break;
                     case 3:
+                        viewTeamLeaveBalances();
+                        break;
+                    case 4:                               
                         viewPendingLeaves();
                         break;
-                    case 4:
+                    case 5:
                         approveRejectLeave();
                         break;
-                    case 5:
+                    case 6:
                         viewTeamLeaveCalendar();
                         break;
-                    case 6:
+                    case 7:
                         viewPendingPerformanceReviews();
                         break;
-                    case 7:
+                    case 8:
                         reviewPerformance();
                         break;
-                    case 8:
+                    case 9:
                         viewTeamGoals();
                         break;
                     case 0:
@@ -109,16 +112,17 @@ public class ManagerMenu {
         System.out.println();
         System.out.println("TEAM MANAGEMENT");
         System.out.println("  2. View Team Members");
+        System.out.println("  3. View Team Leave Balances");        
         System.out.println();
         System.out.println("LEAVE APPROVALS");
-        System.out.println("  3. View Pending Leave Requests");
-        System.out.println("  4. Approve/Reject Leave");
-        System.out.println("  5. View Team Leave Calendar");
+        System.out.println("  4. View Pending Leave Requests");     
+        System.out.println("  5. Approve/Reject Leave");
+        System.out.println("  6. View Team Leave Calendar");
         System.out.println();
         System.out.println("PERFORMANCE MANAGEMENT");
-        System.out.println("  6. View Pending Performance Reviews");
-        System.out.println("  7. Review Team Member Performance");
-        System.out.println("  8. View Team Goals");
+        System.out.println("  7. View Pending Performance Reviews");
+        System.out.println("  8. Review Team Member Performance");
+        System.out.println("  9. View Team Goals");
         System.out.println();
         System.out.println("  0. Logout");
         MenuHelper.printDivider();
@@ -262,6 +266,47 @@ public class ManagerMenu {
         } catch (Exception e) {
             MenuHelper.printError(e.getMessage());
         }
+    }
+    
+    
+    private void viewTeamLeaveBalances() {
+        Employee currentUser = SessionManager.getCurrentUser();
+        
+        List<Employee> teamMembers = employeeService.getTeamMembers(currentUser.getEmployeeId());
+        
+        if (teamMembers == null || teamMembers.isEmpty()) {
+            MenuHelper.printInfo("No team members found.");
+            return;
+        }
+        
+        MenuHelper.printHeader("TEAM LEAVE BALANCES");
+        
+        int currentYear = java.time.LocalDate.now().getYear();
+        
+        for (Employee emp : teamMembers) {
+            System.out.println("\n" + emp.getFullName() + " (" + emp.getEmployeeId() + ")");
+            MenuHelper.printDivider();
+            
+            List<com.revature.revworkforce.model.LeaveBalance> balances = 
+                leaveService.getLeaveBalances(emp.getEmployeeId(), currentYear);
+            
+            if (balances != null && !balances.isEmpty()) {
+                System.out.printf("  %-15s %-10s %-10s %-10s%n", 
+                    "Leave Type", "Total", "Used", "Available");
+                System.out.println("  " + "-".repeat(45));
+                
+                for (com.revature.revworkforce.model.LeaveBalance balance : balances) {
+                    System.out.printf("  %-15s %-10d %-10d %-10d%n",
+                        balance.getLeaveTypeName(),
+                        balance.getTotalAllocated(),
+                        balance.getUsedLeaves(),
+                        balance.getAvailableLeaves());
+                }
+            } else {
+                System.out.println("  No leave balance information available.");
+            }
+        }
+        MenuHelper.printDivider();
     }
     
     private void viewTeamLeaveCalendar() {

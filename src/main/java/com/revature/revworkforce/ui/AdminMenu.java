@@ -63,42 +63,47 @@ public class AdminMenu {
                 int choice = MenuHelper.getIntInput(scanner, "Enter your choice: ");
                 
                 switch (choice) {
-                    case 1:
-                        // Delegate to manager menu
-                        managerMenu.display();
-                        running = false; // Return to main menu after manager menu
-                        break;
-                    case 2:
-                        viewAllEmployees();
-                        break;
-                    case 3:
-                        addNewEmployee();
-                        break;
-                    case 4:
-                        updateEmployee();
-                        break;
-                    case 5:
-                        deactivateEmployee();
-                        break;
-                    case 6:
-                        assignLeaveBalances();
-                        break;
-                    case 7:
-                        addHoliday();
-                        break;
-                    case 8:
-                        viewHolidays();
-                        break;
-                    case 9:
-                        createAnnouncement();
-                        break;
-                    case 10:
-                        viewAllAnnouncements();
-                        break;
-                    case 11:  // ADD THIS CASE
-                        viewAuditLogs();
-                        break;
-                    case 0:
+                case 1:
+                    managerMenu.display();
+                    running = false;
+                    break;
+                case 2:
+                    viewAllEmployees();
+                    break;
+                case 3:                                    
+                    searchEmployees();
+                    break;
+                case 4:                                   
+                    addNewEmployee();
+                    break;
+                case 5:
+                    updateEmployee();
+                    break;
+                case 6:
+                    deactivateEmployee();
+                    break;
+                case 7:
+                    assignLeaveBalances();
+                    break;
+                case 8:                                    
+                    adjustLeaveBalance();
+                    break;
+                case 9:
+                    addHoliday();
+                    break;
+                case 10:
+                    viewHolidays();
+                    break;
+                case 11:
+                    createAnnouncement();
+                    break;
+                case 12:
+                    viewAllAnnouncements();
+                    break;
+                case 13:
+                    viewAuditLogs();
+                    break;
+                case 0:
                         running = false;
                         MenuHelper.printInfo("Logging out...");
                         break;
@@ -127,19 +132,21 @@ public class AdminMenu {
         System.out.println();
         System.out.println("EMPLOYEE MANAGEMENT");
         System.out.println("  2. View All Employees");
-        System.out.println("  3. Add New Employee");
-        System.out.println("  4. Update Employee");
-        System.out.println("  5. Deactivate Employee");
+        System.out.println("  3. Search Employees");            
+        System.out.println("  4. Add New Employee");           
+        System.out.println("  5. Update Employee");
+        System.out.println("  6. Deactivate Employee");
         System.out.println();
         System.out.println("LEAVE MANAGEMENT");
-        System.out.println("  6. Assign Leave Balances");
-        System.out.println("  7. Add Holiday");
-        System.out.println("  8. View Holidays");
+        System.out.println("  7. Assign Leave Balances");
+        System.out.println("  8. Adjust Leave Balance");          
+        System.out.println("  9. Add Holiday");
+        System.out.println(" 10. View Holidays");
         System.out.println();
         System.out.println("SYSTEM MANAGEMENT");
-        System.out.println("  9. Create Announcement");
-        System.out.println(" 10. View All Announcements");
-        System.out.println(" 11. View Audit Logs");  
+        System.out.println(" 11. Create Announcement");
+        System.out.println(" 12. View All Announcements");
+        System.out.println(" 13. View Audit Logs");
         System.out.println();
         System.out.println("  0. Logout");
         MenuHelper.printDivider();
@@ -320,6 +327,223 @@ public class AdminMenu {
             }
         } catch (Exception e) {
             MenuHelper.printError(e.getMessage());
+        }
+    }
+    
+    private void searchEmployees() {
+        MenuHelper.printHeader("SEARCH EMPLOYEES");
+        
+        System.out.println("Search By:");
+        System.out.println("1. Employee ID");
+        System.out.println("2. Name");
+        System.out.println("3. Email");
+        System.out.println("4. Department");
+        System.out.println("5. Designation");
+        System.out.println("0. Back");
+        
+        int choice = MenuHelper.getIntInput(scanner, "\nEnter your choice: ");
+        
+        List<Employee> employees = null;
+        
+        switch (choice) {
+            case 1:
+                String empId = MenuHelper.getStringInput(scanner, "Enter Employee ID: ");
+                Employee emp = employeeService.getEmployeeDetails(empId);
+                if (emp != null) {
+                    employees = new java.util.ArrayList<>();
+                    employees.add(emp);
+                }
+                break;
+                
+            case 2:
+                String name = MenuHelper.getStringInput(scanner, "Enter Name: ");
+                employees = employeeService.getAllActiveEmployees();
+                if (employees != null) {
+                    final String searchName = name.toLowerCase();
+                    employees = employees.stream()
+                        .filter(e -> e.getFullName().toLowerCase().contains(searchName))
+                        .collect(java.util.stream.Collectors.toList());
+                }
+                break;
+                
+            case 3:
+                String email = MenuHelper.getStringInput(scanner, "Enter Email: ");
+                employees = employeeService.getAllActiveEmployees();
+                if (employees != null) {
+                    final String searchEmail = email.toLowerCase();
+                    employees = employees.stream()
+                        .filter(e -> e.getEmail().toLowerCase().contains(searchEmail))
+                        .collect(java.util.stream.Collectors.toList());
+                }
+                break;
+                
+            case 4:
+                List<com.revature.revworkforce.model.Department> departments = 
+                    employeeService.getAllDepartments();
+                if (departments != null && !departments.isEmpty()) {
+                    System.out.println("\nDepartments:");
+                    for (com.revature.revworkforce.model.Department dept : departments) {
+                        System.out.println(dept.getDepartmentId() + ". " + dept.getDepartmentName());
+                    }
+                    int deptId = MenuHelper.getIntInput(scanner, "Select Department: ");
+                    employees = employeeService.getEmployeesByDepartment(deptId);
+                }
+                break;
+                
+            case 5:
+                List<com.revature.revworkforce.model.Designation> designations = 
+                    employeeService.getAllDesignations();
+                if (designations != null && !designations.isEmpty()) {
+                    System.out.println("\nDesignations:");
+                    for (com.revature.revworkforce.model.Designation desig : designations) {
+                        System.out.println(desig.getDesignationId() + ". " + desig.getDesignationName());
+                    }
+                    int desigId = MenuHelper.getIntInput(scanner, "Select Designation: ");
+                    employees = employeeService.getAllActiveEmployees();
+                    if (employees != null) {
+                        final int searchDesigId = desigId;
+                        employees = employees.stream()
+                            .filter(e -> e.getDesignationId() == searchDesigId)
+                            .collect(java.util.stream.Collectors.toList());
+                    }
+                }
+                break;
+                
+            case 0:
+                return;
+                
+            default:
+                MenuHelper.printError("Invalid choice.");
+                return;
+        }
+        
+        if (employees != null && !employees.isEmpty()) {
+            MenuHelper.displayEmployeeList(employees);
+            System.out.println("Total Results: " + employees.size());
+        } else {
+            MenuHelper.printInfo("No employees found matching the search criteria.");
+        }
+    }
+
+    private void adjustLeaveBalance() {
+        MenuHelper.printHeader("ADJUST LEAVE BALANCE");
+        
+        String employeeId = MenuHelper.getStringInput(scanner, "Enter Employee ID: ");
+        
+        Employee employee = employeeService.getEmployeeDetails(employeeId);
+        if (employee == null) {
+            MenuHelper.printError("Employee not found.");
+            return;
+        }
+        
+        System.out.println("Employee: " + employee.getFullName());
+        System.out.println();
+        
+        // Show current balances
+        int currentYear = java.time.LocalDate.now().getYear();
+        List<com.revature.revworkforce.model.LeaveBalance> balances = 
+            leaveService.getLeaveBalances(employeeId, currentYear);
+        
+        if (balances == null || balances.isEmpty()) {
+            MenuHelper.printError("No leave balances found. Please assign leave balances first.");
+            return;
+        }
+        
+        MenuHelper.displayLeaveBalances(balances);
+        
+        // Select leave type
+        System.out.println("\nSelect Leave Type to Adjust:");
+        for (int i = 0; i < balances.size(); i++) {
+            System.out.println((i + 1) + ". " + balances.get(i).getLeaveTypeName());
+        }
+        
+        int choice = MenuHelper.getIntInput(scanner, "Enter choice: ");
+        
+        if (choice < 1 || choice > balances.size()) {
+            MenuHelper.printError("Invalid choice.");
+            return;
+        }
+        
+        com.revature.revworkforce.model.LeaveBalance selectedBalance = balances.get(choice - 1);
+        
+        System.out.println("\nCurrent Balance:");
+        System.out.println("Total Allocated: " + selectedBalance.getTotalAllocated());
+        System.out.println("Used: " + selectedBalance.getUsedLeaves());
+        System.out.println("Available: " + selectedBalance.getAvailableLeaves());
+        System.out.println();
+        
+        System.out.println("Adjustment Options:");
+        System.out.println("1. Set New Total Allocated");
+        System.out.println("2. Add to Available");
+        System.out.println("3. Deduct from Available");
+        System.out.println("0. Cancel");
+        
+        int adjustChoice = MenuHelper.getIntInput(scanner, "\nEnter choice: ");
+        
+        try {
+            switch (adjustChoice) {
+                case 1:
+                    int newTotal = MenuHelper.getIntInput(scanner, "Enter new total allocated: ");
+                    if (newTotal < selectedBalance.getUsedLeaves()) {
+                        MenuHelper.printError("New total cannot be less than used leaves (" + 
+                            selectedBalance.getUsedLeaves() + ")");
+                        return;
+                    }
+                    selectedBalance.setTotalAllocated(newTotal);
+                    selectedBalance.setAvailableLeaves(newTotal - selectedBalance.getUsedLeaves());
+                    break;
+                    
+                case 2:
+                    int addDays = MenuHelper.getIntInput(scanner, "Enter days to add: ");
+                    selectedBalance.setTotalAllocated(selectedBalance.getTotalAllocated() + addDays);
+                    selectedBalance.setAvailableLeaves(selectedBalance.getAvailableLeaves() + addDays);
+                    break;
+                    
+                case 3:
+                    int deductDays = MenuHelper.getIntInput(scanner, "Enter days to deduct: ");
+                    if (deductDays > selectedBalance.getAvailableLeaves()) {
+                        MenuHelper.printError("Cannot deduct more than available leaves.");
+                        return;
+                    }
+                    selectedBalance.setTotalAllocated(selectedBalance.getTotalAllocated() - deductDays);
+                    selectedBalance.setAvailableLeaves(selectedBalance.getAvailableLeaves() - deductDays);
+                    break;
+                    
+                case 0:
+                    return;
+                    
+                default:
+                    MenuHelper.printError("Invalid choice.");
+                    return;
+            }
+            
+            // Update in database (we need to add this method to LeaveService)
+            // For now, we'll use DAO directly
+            com.revature.revworkforce.dao.LeaveDAO leaveDAO = new com.revature.revworkforce.dao.LeaveDAOImpl();
+            if (leaveDAO.updateLeaveBalance(selectedBalance)) {
+                MenuHelper.printSuccess("Leave balance adjusted successfully!");
+                
+                // Log the adjustment
+                auditService.logAction(
+                    SessionManager.getCurrentUser().getEmployeeId(),
+                    "LEAVE_BALANCE_ADJUSTED",
+                    "leave_balances",
+                    String.valueOf(selectedBalance.getLeaveBalanceId()),
+                    null,
+                    "New total: " + selectedBalance.getTotalAllocated() + 
+                    ", Available: " + selectedBalance.getAvailableLeaves()
+                );
+                
+                System.out.println("\nUpdated Balance:");
+                System.out.println("Total Allocated: " + selectedBalance.getTotalAllocated());
+                System.out.println("Used: " + selectedBalance.getUsedLeaves());
+                System.out.println("Available: " + selectedBalance.getAvailableLeaves());
+            } else {
+                MenuHelper.printError("Failed to adjust leave balance.");
+            }
+            
+        } catch (Exception e) {
+            MenuHelper.printError("Error adjusting leave balance: " + e.getMessage());
         }
     }
     
