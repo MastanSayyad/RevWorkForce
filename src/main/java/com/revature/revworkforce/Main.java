@@ -7,7 +7,7 @@ import com.revature.revworkforce.ui.ConsoleUI;
  * Main entry point for RevWorkForce Application
  * 
  * @author Mastan-Sayyad
- * @version v0.1.0
+ * @version v1.2.0
  */
 public class Main {
     
