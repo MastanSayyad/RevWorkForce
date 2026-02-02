@@ -94,9 +94,19 @@ public class EmployeeMenu {
                     case 11:
                         viewNotifications();
                         break;
-                    case 12:
+                    case 12:                             
+                        viewEmployeeDirectory();
+                        break;
+                    case 13:                         
+                        viewUpcomingBirthdays();
+                        break;
+                    case 14:                              
+                        viewWorkAnniversaries();
+                        break;
+                    case 15:                              
                         changePassword();
                         break;
+
                     case 0:
                         running = false;
                         MenuHelper.printInfo("Logging out...");
@@ -137,10 +147,13 @@ public class EmployeeMenu {
         System.out.println("  9. Add New Goal");
         System.out.println(" 10. Update Goal Progress");
         System.out.println();
-        System.out.println("NOTIFICATIONS");
+        System.out.println("COMPANY INFORMATION");
         System.out.println(" 11. View Notifications");
+        System.out.println(" 12. Employee Directory");          
+        System.out.println(" 13. Upcoming Birthdays");           
+        System.out.println(" 14. Work Anniversaries");           
         System.out.println();
-        System.out.println(" 12. Change Password");
+        System.out.println(" 15. Change Password");        
         System.out.println("  0. Logout");
         MenuHelper.printDivider();
     }
@@ -430,6 +443,213 @@ public class EmployeeMenu {
                 MenuHelper.printSuccess("All notifications marked as read.");
             }
             }
+    }
+    
+    private void viewEmployeeDirectory() {
+        MenuHelper.printHeader("EMPLOYEE DIRECTORY");
+        
+        System.out.println("1. View All Employees");
+        System.out.println("2. Search by Name");
+        System.out.println("3. Search by Department");
+        System.out.println("0. Back");
+        
+        int choice = MenuHelper.getIntInput(scanner, "\nEnter your choice: ");
+        
+        List<Employee> employees = null;
+        
+        switch (choice) {
+            case 1:
+                employees = employeeService.getAllActiveEmployees();
+                break;
+            case 2:
+                String name = MenuHelper.getStringInput(scanner, "Enter name to search: ");
+                employees = employeeService.getAllActiveEmployees();
+                if (employees != null) {
+                    final String searchName = name.toLowerCase();
+                    employees = employees.stream()
+                        .filter(e -> e.getFullName().toLowerCase().contains(searchName))
+                        .collect(java.util.stream.Collectors.toList());
+                }
+                break;
+            case 3:
+                List<com.revature.revworkforce.model.Department> departments = 
+                    employeeService.getAllDepartments();
+                if (departments != null && !departments.isEmpty()) {
+                    System.out.println("\nDepartments:");
+                    for (com.revature.revworkforce.model.Department dept : departments) {
+                        System.out.println(dept.getDepartmentId() + ". " + dept.getDepartmentName());
+                    }
+                    int deptId = MenuHelper.getIntInput(scanner, "Select Department: ");
+                    employees = employeeService.getEmployeesByDepartment(deptId);
+                }
+                break;
+            case 0:
+                return;
+            default:
+                MenuHelper.printError("Invalid choice.");
+                return;
+        }
+        
+        if (employees != null && !employees.isEmpty()) {
+            MenuHelper.printSubHeader("EMPLOYEE DIRECTORY (" + employees.size() + " employees)");
+            System.out.printf("%-10s %-25s %-30s %-20s %-15s%n", 
+                "Emp ID", "Name", "Email", "Department", "Phone");
+            MenuHelper.printDivider();
+            
+            for (Employee emp : employees) {
+                System.out.printf("%-10s %-25s %-30s %-20s %-15s%n",
+                    emp.getEmployeeId(),
+                    emp.getFullName(),
+                    emp.getEmail(),
+                    emp.getDepartmentName() != null ? emp.getDepartmentName() : "N/A",
+                    emp.getPhone());
+            }
+            MenuHelper.printDivider();
+        } else {
+            MenuHelper.printInfo("No employees found.");
+        }
+    }
+
+    private void viewUpcomingBirthdays() {
+        MenuHelper.printHeader("UPCOMING BIRTHDAYS");
+        
+        List<Employee> employees = employeeService.getAllActiveEmployees();
+        
+        if (employees == null || employees.isEmpty()) {
+            MenuHelper.printInfo("No employees found.");
+            return;
+        }
+        
+        // Filter employees with birthdays in next 30 days
+        java.time.LocalDate today = java.time.LocalDate.now();
+        java.time.LocalDate endDate = today.plusDays(30);
+        
+        List<Employee> upcomingBirthdays = new java.util.ArrayList<>();
+        
+        for (Employee emp : employees) {
+            if (emp.getDateOfBirth() != null) {
+                // Get birthday this year
+                java.time.LocalDate birthday = emp.getDateOfBirth()
+                    .withYear(today.getYear());
+                
+                // If birthday already passed this year, check next year
+                if (birthday.isBefore(today)) {
+                    birthday = birthday.plusYears(1);
+                }
+                
+                // Check if birthday is within next 30 days
+                if (!birthday.isAfter(endDate)) {
+                    upcomingBirthdays.add(emp);
+                }
+            }
+        }
+        
+        if (upcomingBirthdays.isEmpty()) {
+            MenuHelper.printInfo("No upcoming birthdays in the next 30 days.");
+            return;
+        }
+        
+        // Sort by birthday
+        upcomingBirthdays.sort((e1, e2) -> {
+            java.time.LocalDate bd1 = e1.getDateOfBirth().withYear(today.getYear());
+            java.time.LocalDate bd2 = e2.getDateOfBirth().withYear(today.getYear());
+            if (bd1.isBefore(today)) bd1 = bd1.plusYears(1);
+            if (bd2.isBefore(today)) bd2 = bd2.plusYears(1);
+            return bd1.compareTo(bd2);
+        });
+        
+        MenuHelper.printSubHeader("UPCOMING BIRTHDAYS (Next 30 Days)");
+        System.out.printf("%-25s %-15s %-10s%n", "Name", "Birthday", "Age");
+        MenuHelper.printDivider();
+        
+        for (Employee emp : upcomingBirthdays) {
+            java.time.LocalDate birthday = emp.getDateOfBirth().withYear(today.getYear());
+            if (birthday.isBefore(today)) {
+                birthday = birthday.plusYears(1);
+            }
+            
+            int age = today.getYear() - emp.getDateOfBirth().getYear();
+            if (today.isBefore(emp.getDateOfBirth().withYear(today.getYear()))) {
+                age--;
+            }
+            
+            System.out.printf("%-25s %-15s %-10s%n",
+                emp.getFullName(),
+                MenuHelper.formatDate(emp.getDateOfBirth()),
+                "Turning " + (age + 1));
+        }
+        MenuHelper.printDivider();
+    }
+
+    private void viewWorkAnniversaries() {
+        MenuHelper.printHeader("WORK ANNIVERSARIES");
+        
+        List<Employee> employees = employeeService.getAllActiveEmployees();
+        
+        if (employees == null || employees.isEmpty()) {
+            MenuHelper.printInfo("No employees found.");
+            return;
+        }
+        
+        // Filter employees with work anniversaries in next 30 days
+        java.time.LocalDate today = java.time.LocalDate.now();
+        java.time.LocalDate endDate = today.plusDays(30);
+        
+        List<Employee> upcomingAnniversaries = new java.util.ArrayList<>();
+        
+        for (Employee emp : employees) {
+            if (emp.getJoiningDate() != null) {
+                // Get anniversary this year
+                java.time.LocalDate anniversary = emp.getJoiningDate()
+                    .withYear(today.getYear());
+                
+                // If anniversary already passed this year, check next year
+                if (anniversary.isBefore(today)) {
+                    anniversary = anniversary.plusYears(1);
+                }
+                
+                // Check if anniversary is within next 30 days
+                if (!anniversary.isAfter(endDate)) {
+                    upcomingAnniversaries.add(emp);
+                }
+            }
+        }
+        
+        if (upcomingAnniversaries.isEmpty()) {
+            MenuHelper.printInfo("No work anniversaries in the next 30 days.");
+            return;
+        }
+        
+        // Sort by anniversary date
+        upcomingAnniversaries.sort((e1, e2) -> {
+            java.time.LocalDate ann1 = e1.getJoiningDate().withYear(today.getYear());
+            java.time.LocalDate ann2 = e2.getJoiningDate().withYear(today.getYear());
+            if (ann1.isBefore(today)) ann1 = ann1.plusYears(1);
+            if (ann2.isBefore(today)) ann2 = ann2.plusYears(1);
+            return ann1.compareTo(ann2);
+        });
+        
+        MenuHelper.printSubHeader("WORK ANNIVERSARIES (Next 30 Days)");
+        System.out.printf("%-25s %-15s %-15s%n", "Name", "Joining Date", "Years");
+        MenuHelper.printDivider();
+        
+        for (Employee emp : upcomingAnniversaries) {
+            java.time.LocalDate anniversary = emp.getJoiningDate().withYear(today.getYear());
+            if (anniversary.isBefore(today)) {
+                anniversary = anniversary.plusYears(1);
+            }
+            
+            int years = today.getYear() - emp.getJoiningDate().getYear();
+            if (today.isBefore(emp.getJoiningDate().withYear(today.getYear()))) {
+                years--;
+            }
+            
+            System.out.printf("%-25s %-15s %-15s%n",
+                emp.getFullName(),
+                MenuHelper.formatDate(emp.getJoiningDate()),
+                (years + 1) + " years");
+        }
+        MenuHelper.printDivider();
     }
     
     private void changePassword() {
