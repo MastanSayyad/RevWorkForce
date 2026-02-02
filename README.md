@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/Version-v1.1.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
+[![Release](https://img.shields.io/badge/Version-v1.2.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 
 <div align="center">
 <img width="350"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Logo.png" />
