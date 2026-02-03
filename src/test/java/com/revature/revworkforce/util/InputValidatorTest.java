@@ -113,4 +113,48 @@ public class InputValidatorTest {
         assertFalse(InputValidator.isValidRating(0.5));
         assertFalse(InputValidator.isValidRating(5.5));
     }
+    
+    @Test
+    @DisplayName("Test sanitize input with special characters")
+    public void testSanitizeInput_SpecialChars() {
+        assertEquals("test", InputValidator.sanitizeInput("'test'"));
+        assertEquals("test", InputValidator.sanitizeInput("\"test\""));
+    }
+
+    @Test
+    @DisplayName("Test is not empty - edge cases")
+    public void testIsNotEmpty_EdgeCases() {
+        assertFalse(InputValidator.isNotEmpty(""));
+        assertFalse(InputValidator.isNotEmpty("   "));
+        assertFalse(InputValidator.isNotEmpty("\t"));
+        assertFalse(InputValidator.isNotEmpty("\n"));
+        assertTrue(InputValidator.isNotEmpty("a"));
+    }
+
+    @Test
+    @DisplayName("Test valid email - various formats")
+    public void testIsValidEmail_VariousFormats() {
+        assertTrue(InputValidator.isValidEmail("test@example.com"));
+        assertTrue(InputValidator.isValidEmail("user.name@example.com"));
+        assertTrue(InputValidator.isValidEmail("user+tag@example.com"));
+        assertTrue(InputValidator.isValidEmail("user_name@example.co.uk"));
+    }
+
+    @Test
+    @DisplayName("Test invalid employee ID - various formats")
+    public void testIsValidEmployeeId_VariousInvalid() {
+        assertFalse(InputValidator.isValidEmployeeId("emp001")); // lowercase
+        assertFalse(InputValidator.isValidEmployeeId("EMP")); // no numbers
+        assertFalse(InputValidator.isValidEmployeeId("001")); // no letters
+        assertFalse(InputValidator.isValidEmployeeId("EMPLOYEE001")); // too many letters
+    }
+
+    @Test
+    @DisplayName("Test is valid rating - boundary values")
+    public void testIsValidRating_BoundaryValues() {
+        assertTrue(InputValidator.isValidRating(1.0));
+        assertTrue(InputValidator.isValidRating(5.0));
+        assertFalse(InputValidator.isValidRating(0.9));
+        assertFalse(InputValidator.isValidRating(5.1));
+    }
 }

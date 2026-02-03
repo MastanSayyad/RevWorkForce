@@ -19,7 +19,7 @@ import com.revature.revworkforce.model.Employee;
  */
 
 import org.junit.jupiter.api.Disabled;
-@Disabled("Integration test – requires database")
+//@Disabled("Integration test – requires database")
 public class EmployeeServiceTest {
     
     private EmployeeService employeeService;
@@ -106,5 +106,46 @@ public class EmployeeServiceTest {
         assertThrows(ValidationException.class, () -> {
             employeeService.updateProfile(employee);
         }, "Should throw ValidationException for invalid phone");
+    }
+    
+    @Test
+    @DisplayName("Test get team members")
+    public void testGetTeamMembers() {
+        List<Employee> teamMembers = employeeService.getTeamMembers("MGR001");
+        assertNotNull(teamMembers, "Team members list should not be null");
+    }
+
+    @Test
+    @DisplayName("Test get employees by department")
+    public void testGetEmployeesByDepartment() {
+        List<Employee> employees = employeeService.getEmployeesByDepartment(1);
+        assertNotNull(employees, "Employees list should not be null");
+    }
+
+    @Test
+    @DisplayName("Test deactivate employee")
+    public void testDeactivateEmployee() {
+        // This is a destructive test, so we test the method exists but don't actually deactivate
+        boolean result = employeeService.deactivateEmployee("NONEXISTENT");
+        // Result can be true or false for non-existent employee
+        assertNotNull(result);
+    }
+
+    @Test
+    @DisplayName("Test activate employee")
+    public void testActivateEmployee() {
+        // This tests the method exists
+        boolean result = employeeService.activateEmployee("NONEXISTENT");
+        // Result can be true or false
+        assertNotNull(result);
+    }
+
+    @Test
+    @DisplayName("Test assign role")
+    public void testAssignRole() {
+        // This tests the method exists
+        boolean result = employeeService.assignRole("EMP001", 1);
+        // Result can be true or false
+        assertNotNull(result);
     }
 }

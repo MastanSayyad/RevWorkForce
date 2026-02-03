@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Disabled;
  * Test class for AuthService
  */
 
-@Disabled("Integration test – requires database")
+//@Disabled("Integration test – requires database")
 
 public class AuthServiceTest {
     
