@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 
 import org.junit.jupiter.api.Disabled;
 
-@Disabled("Requires real database connection")
+//@Disabled("Requires real database connection")
 public class DatabaseUtilTest {
     
     @Test
