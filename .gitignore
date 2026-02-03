@@ -33,7 +33,7 @@ logs/
 Thumbs.db
 
 # Sensitive information
-db.properties
+src/main/resources/db.properties
 application.properties
 
 # Compiled class files
