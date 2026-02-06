@@ -23,7 +23,7 @@ The system supports three user roles:
 
 Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
 
-### Key Objectives
+### Key Objectives ✦
 
 - **Centralized Employee Management:** Single source of truth for all employee data
 - **Automated Leave Processing:** Streamlined leave application and approval workflow
@@ -31,7 +31,7 @@ Each with specific functionalities. The application is designed with a **modular
 - **Role-Based Access Control:** Secure access with Admin, Manager, and Employee roles
 - **Audit Trail:** Complete logging of all system activities
 
-## Project Structure
+## Project Structure 🗁
 > [!NOTE]
 > The project is organized to clearly separate **business logic, persistence, and presentation layers.**
 
@@ -63,7 +63,7 @@ RevWorkForce/
 └── pom.xml                             # Maven Configuration
 ```
 
-## Architecture
+## Architecture 모
 
 ### Entity Relationship Diagram (ERD)
 ![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
@@ -74,7 +74,7 @@ RevWorkForce/
 > [!TIP]
 > RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
 
-## System Design
+## System Design ⚙︎
 The application follows a layered architecture pattern:
 - **Presentation Layer**: Console-based UI (EmployeeMenu, ManagerMenu, AdminMenu)
 - **Service Layer**: Business logic implementation
@@ -82,7 +82,7 @@ The application follows a layered architecture pattern:
 - **Util Layer**: Utility classes for validation, security, logging
 - **Database Layer**: Oracle 19c with normalized schema
 
-<h2> Technology Stack</h2>
+## Technology Stack **</>**
 
 ### Backend
 - **Java 11** - Core programming language
@@ -107,7 +107,7 @@ The application follows a layered architecture pattern:
 - **GitHub Actions** - CI/CD pipeline
 
 
-## Features Implemented
+## Features Implemented ✦
 
 > [!NOTE]
 > The features listed in this table are **core functionalities** of RevWorkForce.  
@@ -162,13 +162,13 @@ The application follows a layered architecture pattern:
   </tbody>
 </table>
 
-## Prerequisites
+## Prerequisites 🗎
 - JDK 11 or higher
 - Oracle Database 19c/XE
 - Maven 3.6+
 - Eclipse IDE (optional)
 
-## Installation & Setup
+## Installation & Setup ⓘ
 
 ### 1. Clone Repository
 ```bash
@@ -221,7 +221,8 @@ Or in Eclipse:
 Right-click Main.java → Run As → Java Application
 ```
 
-## Default Login Credentials
+## Default Login Credentials ➜]
+
 | **Role**     | **Employee ID** | **Password**    |
 | -------- | ----------- | ----------- |
 | **Admin**    | ADM001      | password123 |
@@ -233,14 +234,14 @@ Right-click Main.java → Run As → Java Application
 
 
 
-## Testing
+## Testing 𖢥
 
 ### Run Tests
 ```bash
 mvn test
 ```
 
-### View Coverage Report (JaCoCo)
+### View Coverage Report (JaCoCo) ılıı
 ```bash
 mvn jacoco:report
 ```
@@ -251,7 +252,7 @@ mvn jacoco:report
 <img width="1919" height="485" alt="image" src="https://github.com/user-attachments/assets/82599e45-b28f-4b5f-8b94-55a10c3d5534" />
 
 
-## Author
+## Author ©
 **This Project is Built and maintained by:** **[Mastan Sayyad](https://github.com/MastanSayyad)**
 
 <table>
