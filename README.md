@@ -1,5 +1,4 @@
 [![Release](https://img.shields.io/badge/Version-v1.2.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
-
 <div align="center">
 <img width="450"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/revworkforce-gif.gif" />
 <br>
@@ -21,7 +20,7 @@ The system supports three user roles:
 2. **Managers**
 3. **Admins**
 
-Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
+Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based application in future phases.
 
 ### Key Objectives ✦
 
@@ -84,24 +83,24 @@ The application follows a layered architecture pattern:
 
 ## Technology Stack **</>**
 
-### Backend
+#### Backend
 - **Java 11** - Core programming language
 - **JDBC** - Database connectivity
 - **Maven** - Build and dependency management
 - **Log4j 2** - Logging framework
 - **BCrypt** - Password encryption
 
-### Database
+#### Database
 - **Oracle Database 19c/XE** - Primary data store
 - **PL/SQL** - Stored procedures and triggers
 - **XEPDB1** - Pluggable database
 
-### Testing
+#### Testing
 - **JUnit 5** - Unit testing framework
 - **Mockito** - Mocking framework (planned)
 - **JaCoCo** - Code coverage reporting
 
-### Tools
+#### Tools
 - **Eclipse/IntelliJ IDEA** - IDE
 - **Git** - Version control
 - **GitHub Actions** - CI/CD pipeline
