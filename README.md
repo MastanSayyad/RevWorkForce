@@ -1,10 +1,7 @@
 [![Release](https://img.shields.io/badge/Version-v1.2.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 
 <div align="center">
-<img width="350"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Logo.png" />
-
-  <br>
-<br>
+<img width="450"alt="Rev WorkForce logo" src="https://github.com/user-attachments/assets/db55bacd-7d99-46cf-af2f-435b1525d524" />
 
 [![Issues](https://img.shields.io/badge/Issues-60-yellow?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/issues)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-45-blue?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/pulls?q=is%3Apr+is%3Aclosed)
