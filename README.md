@@ -23,9 +23,9 @@ The system supports three user roles:
 
 Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
 
-> This project is part of Revature training program.
-
 ## Project Structure
+> [!NOTE]
+> The project is organized to clearly separate **business logic, persistence, and presentation layers.**
 ```
 revworkforce/
 ├── src/main/java/
@@ -56,6 +56,9 @@ revworkforce/
 -  Comprehensive logging (Log4j)
 -  Input validation
 -  JUnit testing (60%+ coverage)
+
+> [!TIP]
+> RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
 
 ## Architecture
 
@@ -88,23 +91,34 @@ cd revworkforce
 ```
 
 ### 2. Database Setup
+
 ```sql
 -- Connect as SYSTEM user
 sqlplus system/password@localhost:1521/XEPDB1
 
 -- Run setup scripts
 @database/create_user.sql
-@database/schema.sql
+
+-- after creating a user
+@database/schema.sql  
 @database/seed_data.sql
 ```
 
+> [!CAUTION]
+> Running these scripts on an existing schema may overwrite data.
+
 ### 3. Configure Database Connection
+
 Edit `src/main/resources/db.properties`:
 ```properties
 db.url=jdbc:oracle:thin:@localhost:1521/XEPDB1
 db.username=user_name
 db.password=password
 ```
+
+> [!WARNING]
+> Never commit real database credentials to a public repository.
+
 
 ### 4. Build Project
 ```bash
@@ -122,9 +136,14 @@ Right-click Main.java → Run As → Java Application
 ```
 
 ## Default Login Credentials
-- **Admin**: ADM001 / password123
-- **Manager**: MGR001 / password123
-- **Employee**: EMP001 / password123
+| **Role**     | **Employee ID** | **Password**    |
+| -------- | ----------- | ----------- |
+| **Admin**    | ADM001      | password123 |
+|**Manager**  | MGR001      | password123 |
+| **Employee**| EMP001      | password123 |
+
+> [!TIP]
+> Change default passwords immediately in production environments.
 
 ## Testing
 
@@ -137,7 +156,9 @@ mvn test
 ```bash
 mvn jacoco:report
 ```
-**Report location:** `target/site/jacoco/index.html`
+> [!NOTE]
+> Coverage reports are generated at:
+> `target/site/jacoco/index.html`
 
 <img width="1919" height="485" alt="image" src="https://github.com/user-attachments/assets/82599e45-b28f-4b5f-8b94-55a10c3d5534" />
 
