@@ -57,8 +57,7 @@ revworkforce/
 -  Input validation
 -  JUnit testing (60%+ coverage)
 
-> [!TIP]
-> RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
+
 
 ## Architecture
 
@@ -67,6 +66,9 @@ revworkforce/
 
 ### Application Architecture
 ![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
+
+> [!TIP]
+> RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
 
 ## System Design
 The application follows a layered architecture pattern:
