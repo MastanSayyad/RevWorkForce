@@ -17,11 +17,19 @@
 ##  Welcome to RevWorkForce 
 Rev Workforce is a **console-based** Human Resource Management (HRM) application designed to streamline **employee management, leave tracking, and performance review processes**. 
 The system supports three user roles: 
-- **Employees**
-- **Managers**
-- **Admins**
+1. **Employees**
+2. **Managers**
+3. **Admins**
 
 Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based web application in future phases.
+
+### Key Objectives
+
+- **Centralized Employee Management:** Single source of truth for all employee data
+- **Automated Leave Processing:** Streamlined leave application and approval workflow
+- **Performance Tracking:** Systematic performance review and goal management
+- **Role-Based Access Control:** Secure access with Admin, Manager, and Employee roles
+- **Audit Trail:** Complete logging of all system activities
 
 ## Project Structure
 > [!NOTE]
@@ -54,6 +62,50 @@ RevWorkForce/
 ├── .gitignore                          # Git Ignore File
 └── pom.xml                             # Maven Configuration
 ```
+
+## Architecture
+
+### Entity Relationship Diagram (ERD)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
+
+### Application Architecture
+![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
+
+> [!TIP]
+> RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
+
+## System Design
+The application follows a layered architecture pattern:
+- **Presentation Layer**: Console-based UI (EmployeeMenu, ManagerMenu, AdminMenu)
+- **Service Layer**: Business logic implementation
+- **DAO Layer**: Data Access Objects for database operations
+- **Util Layer**: Utility classes for validation, security, logging
+- **Database Layer**: Oracle 19c with normalized schema
+
+<h2> Technology Stack</h2>
+
+### Backend
+- **Java 11** - Core programming language
+- **JDBC** - Database connectivity
+- **Maven** - Build and dependency management
+- **Log4j 2** - Logging framework
+- **BCrypt** - Password encryption
+
+### Database
+- **Oracle Database 19c/XE** - Primary data store
+- **PL/SQL** - Stored procedures and triggers
+- **XEPDB1** - Pluggable database
+
+### Testing
+- **JUnit 5** - Unit testing framework
+- **Mockito** - Mocking framework (planned)
+- **JaCoCo** - Code coverage reporting
+
+### Tools
+- **Eclipse/IntelliJ IDEA** - IDE
+- **Git** - Version control
+- **GitHub Actions** - CI/CD pipeline
+
 
 ## Features Implemented
 
@@ -106,110 +158,6 @@ RevWorkForce/
     
   </tbody>
 </table>
-
-## Architecture
-
-### Entity Relationship Diagram (ERD)
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
-
-### Application Architecture
-![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
-
-> [!TIP]
-> RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
-
-## System Design
-The application follows a layered architecture pattern:
-- **Presentation Layer**: Console-based UI (EmployeeMenu, ManagerMenu, AdminMenu)
-- **Service Layer**: Business logic implementation
-- **DAO Layer**: Data Access Objects for database operations
-- **Util Layer**: Utility classes for validation, security, logging
-- **Database Layer**: Oracle 19c with normalized schema
-
-<h2> Technology Stack</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">Category</th>
-      <th align="left">Technology</th>
-      <th align="left">Purpose / Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Backend</b></td>
-      <td>Java 11</td>
-      <td>Core programming language</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>JDBC</td>
-      <td>Database connectivity</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Maven</td>
-      <td>Build and dependency management</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Log4j 2</td>
-      <td>Logging framework</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>BCrypt</td>
-      <td>Password encryption</td>
-    </tr>
-    <tr>
-      <td><b>Database</b></td>
-      <td>Oracle Database 19c/XE</td>
-      <td>Primary data store</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>PL/SQL</td>
-      <td>Stored procedures and triggers</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>XEPDB1</td>
-      <td>Oracle pluggable database</td>
-    </tr>
-    <tr>
-      <td><b>Testing</b></td>
-      <td>JUnit 5</td>
-      <td>Unit testing framework</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Mockito <i>(Planned)</i></td>
-      <td>Mocking framework</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>JaCoCo</td>
-      <td>Code coverage reporting</td>
-    </tr>
-    <tr>
-      <td><b>Tools</b></td>
-      <td>Eclipse / IntelliJ IDEA</td>
-      <td>Integrated Development Environments</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Git</td>
-      <td>Version control</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>GitHub Actions</td>
-      <td>CI/CD pipeline</td>
-    </tr>
-  </tbody>
-</table>
-
 
 ## Prerequisites
 - JDK 11 or higher
