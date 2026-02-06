@@ -109,6 +109,9 @@ The application follows a layered architecture pattern:
 
 ## Features Implemented
 
+> [!NOTE]
+> The features listed in this table are **core functionalities** of RevWorkForce.  
+
 <table>
   <thead>
     <tr>
