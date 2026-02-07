@@ -305,7 +305,25 @@ mvn jacoco:report
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
 - [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
 - [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md#prerequisites-) - *Step-by-step project build and usage guide Instructions*
+- [PPT](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
 - [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Application workflows and module interactions*
 - [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Architecture diagrams, ERD, and system design visuals*
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
+
+
+
+
+
+<p align="right">
+  <a href="#top">
+    <img 
+      src="https://github.com/user-attachments/assets/0d336152-8f57-44e2-a886-c8b37bd1d4f0" 
+      alt="Scroll to Top"
+      width="40"
+    />
+  </a>
+</p>
+
+
+
