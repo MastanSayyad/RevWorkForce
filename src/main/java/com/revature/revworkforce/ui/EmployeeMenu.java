@@ -158,16 +158,52 @@ public class EmployeeMenu {
         MenuHelper.printDivider();
     }
     
+//    private void viewProfile() {
+//        Employee currentUser = SessionManager.getCurrentUser();
+//        Employee employee = employeeService.getEmployeeDetails(currentUser.getEmployeeId());
+//        
+//        if (employee != null) {
+//            MenuHelper.displayEmployeeDetails(employee);
+//        } else {
+//            MenuHelper.printError("Failed to retrieve profile.");
+//        }
+//    }
+    
     private void viewProfile() {
         Employee currentUser = SessionManager.getCurrentUser();
-        Employee employee = employeeService.getEmployeeDetails(currentUser.getEmployeeId());
         
-        if (employee != null) {
-            MenuHelper.displayEmployeeDetails(employee);
-        } else {
+        if (currentUser == null) {
+            MenuHelper.printError("No logged-in user found.");
+            return;
+        }
+
+        Employee employee = employeeService.getEmployeeDetails(currentUser.getEmployeeId());
+
+        if (employee == null) {
             MenuHelper.printError("Failed to retrieve profile.");
+            return;
+        }
+
+        // Display employee details
+        MenuHelper.displayEmployeeDetails(employee);
+
+        // Display manager details if available
+        String managerId = employee.getManagerId();
+        if (managerId != null) {
+            Employee manager = employeeService.getEmployeeDetails(managerId);
+            if (manager != null) {
+                System.out.println("\n--- REPORTING MANAGER DETAILS ---");
+                System.out.println("Manager Name  : " + manager.getFullName());
+                System.out.println("Manager Email : " + manager.getEmail());
+                System.out.println("Manager Phone : " + manager.getPhone());
+                MenuHelper.printDivider();
+            } else {
+                System.out.println("\nManager details not found.");
+                MenuHelper.printDivider();
+            }
         }
     }
+
     
     private void updateProfile() {
         MenuHelper.printHeader("UPDATE PROFILE");
