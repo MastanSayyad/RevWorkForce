@@ -4,7 +4,7 @@
 <br>
   <br>
 
-[![Issues](https://img.shields.io/badge/Issues-80-yellow?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/issues)
+[![Issues](https://img.shields.io/badge/Issues-80-red?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/issues)
 [![Pull Requests](https://img.shields.io/badge/Pull%20Requests-65-blue?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/pulls?q=is%3Apr+is%3Aclosed)
 [![CI](https://github.com/mastansayyad/revworkforce/actions/workflows/maven.yml/badge.svg)](https://github.com/MastanSayyad/RevWorkForce/actions)
 [![Documentation](https://img.shields.io/badge/Documentation-Read%20Docs-blue?logo=read-the-docs&style=flat)](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs)
