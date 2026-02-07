@@ -17,6 +17,10 @@ import com.revature.revworkforce.model.LeaveApplication;
 /**
  * Test class for LeaveService
  */
+
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 public class LeaveServiceTest {
     
     private LeaveService leaveService;

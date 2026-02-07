@@ -13,9 +13,10 @@ import org.junit.jupiter.api.Test;
  * Test class for DatabaseUtil
  */
 
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
 
-//@Disabled("Requires real database connection")
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 public class DatabaseUtilTest {
     
     @Test
