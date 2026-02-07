@@ -169,13 +169,13 @@ The application follows a layered architecture pattern:
 
 ## Installation & Setup ⓘ
 
-### 1. Clone Repository
+### 1. Clone Repository ⿻
 ```bash
 git clone 
 cd revworkforce
 ```
 
-### 2. Database Setup
+### 2. Database Setup ⛁
 
 ```sql
 -- Connect as SYSTEM user
@@ -205,7 +205,20 @@ db.password=password
 > Never commit real database credentials to a public repository.
 
 
-### 4. Build Project
+### 4. Build Project 🛠
+
+> [!NOTE]
+> This project uses **Maven** for build and dependency management.  
+> Maven automatically handles dependency downloads, classpath configuration, and build lifecycle using `pom.xml`.
+
+| Artifact       | Meaning                |   Configuration |
+| ---------- | ---------------------- | --------------- |
+| groupId    | Company / organization |  com.revature   |
+| artifactId | Project name           |  revworkforce  |
+| version    | Project version        |  0.0.1 SNAPSHOT |
+| packaging  | jar / war              |    jar |
+
+
 ```bash
 mvn clean install
 ```
@@ -219,6 +232,9 @@ Or in Eclipse:
 ```
 Right-click Main.java → Run As → Java Application
 ```
+
+> Maven is also required for running **CI/CD pipelines** via GitHub Actions.
+
 
 ## Default Login Credentials ➜]
 
