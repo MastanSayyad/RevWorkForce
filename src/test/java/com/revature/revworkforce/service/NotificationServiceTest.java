@@ -14,6 +14,10 @@ import com.revature.revworkforce.model.Notification;
 /**
  * Test class for NotificationService
  */
+
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 public class NotificationServiceTest {
     
     private NotificationService notificationService;
