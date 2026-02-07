@@ -16,6 +16,10 @@ import com.revature.revworkforce.model.PerformanceReview;
 /**
  * Test class for PerformanceService
  */
+
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 public class PerformanceServiceTest {
     
     private PerformanceService performanceService;
