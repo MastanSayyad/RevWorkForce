@@ -92,21 +92,26 @@ public class EmployeeMenu {
                         updateGoalProgress();
                         break;
                     case 11:
+                        createPerformanceReview();
+                        break;
+                    case 12:
+                        viewMyPerformanceReviews();
+                        break;
+                    case 13:  // Update all numbers below
                         viewNotifications();
                         break;
-                    case 12:                             
+                    case 14:                             
                         viewEmployeeDirectory();
                         break;
-                    case 13:                         
+                    case 15:                         
                         viewUpcomingBirthdays();
                         break;
-                    case 14:                              
+                    case 16:                              
                         viewWorkAnniversaries();
                         break;
-                    case 15:                              
+                    case 17:                              
                         changePassword();
                         break;
-
                     case 0:
                         running = false;
                         MenuHelper.printInfo("Logging out...");
@@ -146,14 +151,16 @@ public class EmployeeMenu {
         System.out.println("  8. View My Goals");
         System.out.println("  9. Add New Goal");
         System.out.println(" 10. Update Goal Progress");
+        System.out.println(" 11. Create Performance Review");      
+        System.out.println(" 12. View My Performance Reviews");    
         System.out.println();
         System.out.println("COMPANY INFORMATION");
-        System.out.println(" 11. View Notifications");
-        System.out.println(" 12. Employee Directory");          
-        System.out.println(" 13. Upcoming Birthdays");           
-        System.out.println(" 14. Work Anniversaries");           
+        System.out.println(" 13. View Notifications");            
+        System.out.println(" 14. Employee Directory");
+        System.out.println(" 15. Upcoming Birthdays");
+        System.out.println(" 16. Work Anniversaries");
         System.out.println();
-        System.out.println(" 15. Change Password");        
+        System.out.println(" 17. Change Password");
         System.out.println("  0. Logout");
         MenuHelper.printDivider();
     }
@@ -462,6 +469,160 @@ public class EmployeeMenu {
             }
         } catch (Exception e) {
             MenuHelper.printError(e.getMessage());
+        }
+    }
+    
+    private void createPerformanceReview() {
+        MenuHelper.printHeader("CREATE PERFORMANCE REVIEW");
+        
+        Employee currentUser = SessionManager.getCurrentUser();
+        int currentYear = java.time.LocalDate.now().getYear();
+        
+        // Check if review already exists for this year
+        com.revature.revworkforce.service.PerformanceService perfService = 
+            new com.revature.revworkforce.service.PerformanceServiceImpl();
+        
+        // Check existing review
+        List<com.revature.revworkforce.model.PerformanceReview> existingReviews = 
+            perfService.getEmployeeReviews(currentUser.getEmployeeId());
+        
+        if (existingReviews != null) {
+            for (com.revature.revworkforce.model.PerformanceReview rev : existingReviews) {
+                if (rev.getReviewYear() == currentYear && 
+                    !"REVIEWED".equals(rev.getStatus())) {
+                    MenuHelper.printError("You already have a performance review for " + 
+                        currentYear + ". Status: " + rev.getStatus());
+                    return;
+                }
+            }
+        }
+        
+        System.out.println("Performance Review for Year: " + currentYear);
+        System.out.println();
+        
+        System.out.println("Enter Key Deliverables (press Enter twice to finish):");
+        StringBuilder deliverables = new StringBuilder();
+        String line;
+        int emptyLines = 0;
+        while (true) {
+            line = scanner.nextLine();
+            if (line.isEmpty()) {
+                emptyLines++;
+                if (emptyLines >= 2) break;
+            } else {
+                emptyLines = 0;
+            }
+            deliverables.append(line).append("\n");
+        }
+        
+        System.out.println("\nEnter Major Accomplishments (press Enter twice to finish):");
+        StringBuilder accomplishments = new StringBuilder();
+        emptyLines = 0;
+        while (true) {
+            line = scanner.nextLine();
+            if (line.isEmpty()) {
+                emptyLines++;
+                if (emptyLines >= 2) break;
+            } else {
+                emptyLines = 0;
+            }
+            accomplishments.append(line).append("\n");
+        }
+        
+        System.out.println("\nEnter Areas of Improvement (press Enter twice to finish):");
+        StringBuilder improvements = new StringBuilder();
+        emptyLines = 0;
+        while (true) {
+            line = scanner.nextLine();
+            if (line.isEmpty()) {
+                emptyLines++;
+                if (emptyLines >= 2) break;
+            } else {
+                emptyLines = 0;
+            }
+            improvements.append(line).append("\n");
+        }
+        
+        double selfRating = MenuHelper.getDoubleInput(scanner, 
+            "\nSelf-Assessment Rating (1.0 - 5.0): ");
+        
+        // Create review
+        com.revature.revworkforce.model.PerformanceReview review = 
+            new com.revature.revworkforce.model.PerformanceReview();
+        review.setEmployeeId(currentUser.getEmployeeId());
+        review.setReviewYear(currentYear);
+        review.setKeyDeliverables(deliverables.toString().trim());
+        review.setMajorAccomplishments(accomplishments.toString().trim());
+        review.setAreasOfImprovement(improvements.toString().trim());
+        review.setSelfAssessmentRating(selfRating);
+        review.setStatus("DRAFT");
+        
+        try {
+            int reviewId = perfService.createPerformanceReview(review);
+            if (reviewId > 0) {
+                MenuHelper.printSuccess("Performance review created successfully! ID: " + reviewId);
+                
+                System.out.println("\nOptions:");
+                System.out.println("1. Submit to Manager");
+                System.out.println("2. Save as Draft (can edit later)");
+                
+                int choice = MenuHelper.getIntInput(scanner, "Enter choice: ");
+                
+                if (choice == 1) {
+                    if (perfService.submitPerformanceReview(reviewId, currentUser.getEmployeeId())) {
+                        MenuHelper.printSuccess("Performance review submitted to your manager!");
+                    }
+                } else {
+                    MenuHelper.printInfo("Review saved as draft. You can submit it later.");
+                }
+            } else {
+                MenuHelper.printError("Failed to create performance review.");
+            }
+        } catch (Exception e) {
+            MenuHelper.printError(e.getMessage());
+        }
+    }
+
+    private void viewMyPerformanceReviews() {
+        Employee currentUser = SessionManager.getCurrentUser();
+        
+        com.revature.revworkforce.service.PerformanceService perfService = 
+            new com.revature.revworkforce.service.PerformanceServiceImpl();
+        
+        List<com.revature.revworkforce.model.PerformanceReview> reviews = 
+            perfService.getEmployeeReviews(currentUser.getEmployeeId());
+        
+        if (reviews == null || reviews.isEmpty()) {
+            MenuHelper.printInfo("No performance reviews found.");
+            return;
+        }
+        
+        MenuHelper.printSubHeader("MY PERFORMANCE REVIEWS");
+        
+        for (com.revature.revworkforce.model.PerformanceReview review : reviews) {
+            System.out.println("\n=== Review ID: " + review.getReviewId() + 
+                " | Year: " + review.getReviewYear() + " | Status: " + review.getStatus() + " ===");
+            
+            System.out.println("\nKey Deliverables:");
+            System.out.println(review.getKeyDeliverables());
+            
+            System.out.println("\nMajor Accomplishments:");
+            System.out.println(review.getMajorAccomplishments());
+            
+            System.out.println("\nAreas of Improvement:");
+            System.out.println(review.getAreasOfImprovement());
+            
+            System.out.println("\nSelf-Assessment Rating: " + review.getSelfAssessmentRating());
+            
+            // Show manager feedback if reviewed
+            if ("REVIEWED".equals(review.getStatus()) && review.getManagerFeedback() != null) {
+                System.out.println("\n--- MANAGER FEEDBACK ---");
+                System.out.println(review.getManagerFeedback());
+                System.out.println("Manager Rating: " + review.getManagerRating());
+                System.out.println("Reviewed By: " + review.getReviewerName());
+            }
+            
+            MenuHelper.printDivider();
         }
     }
     
