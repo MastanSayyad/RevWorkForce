@@ -312,8 +312,6 @@ mvn jacoco:report
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
 
 
----
-
 <p align="right">
   <a href="https://github.com/MastanSayyad/RevWorkForce/">
     <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=800080" />
