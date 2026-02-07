@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/Version-v1.2.0-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
+[![Release](https://img.shields.io/badge/Version-v1.2.1-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 <div align="center">
 <img width="450"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/revworkforce-gif.gif" />
 <br>
@@ -305,22 +305,21 @@ mvn jacoco:report
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
 - [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
 - [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md#prerequisites-) - *Step-by-step project build and usage guide Instructions*
-- [PPT](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
+- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
 - [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Application workflows and module interactions*
 - [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Architecture diagrams, ERD, and system design visuals*
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
 
 
+---
+
 <p align="right">
-  <a href="https://github.com/MastanSayyad/RevWorkForce?tab=readme-ov-file#top">
-    <img 
-      src="https://github.com/user-attachments/assets/c739895c-9004-4c9b-95aa-148c8d595250" 
-      alt="go to top"
-      width="40"
-    />
+  <a href="https://github.com/MastanSayyad/RevWorkForce/">
+    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=800080" />
   </a>
 </p>
+
 
 
 
