@@ -14,7 +14,7 @@
 5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#5-manager-user-guide)
 6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#6-administrator-user-guide)
 7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#7-common-tasks)
-8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#8-troubleshooting)
+8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/buserlob/docs/docs/User_Manual.md#8-troubleshooting)
 9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#9-glossary)
 10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#10-appendices)
 
@@ -185,7 +185,7 @@ The system supports multiple leave types:
 
 ### 3.1 Role Hierarchy
 
-<img width="1473" height="764" alt="image" src="https://github.com/user-attachments/assets/a14ce73b-7c02-4009-8990-7072a68667c6" />
+<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/RevWorkForce_Role_Hierarchy.png" />
 
 ### 3.2 Employee Role
 
