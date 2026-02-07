@@ -20,13 +20,13 @@
 
 ---
 
-### About RevWorkForce
+### 1. About RevWorkForce
 
 RevWorkForce is a comprehensive Human Resource Management (HRM) system designed to streamline and automate HR processes within organizations. The system provides a centralized platform for managing employees, leave applications, performance reviews, and organizational goals.
 
-### System Requirements
+### 1.1 System Requirements
 
-**Minimum Requirements:**
+**1.1.1 Minimum Requirements:**
 - Operating System: Windows 10, macOS 10.14+, or Linux
 - Java Runtime Environment (JRE): Version 11 or higher
 - Memory: 2GB RAM minimum
@@ -34,12 +34,12 @@ RevWorkForce is a comprehensive Human Resource Management (HRM) system designed 
 - Network: Access to Oracle database server
 - Display: Console/Terminal application
 
-**Software Requirements:**
+**1.1.2 Software Requirements:**
 - Java 11 or higher installed
 - Oracle 19c Express Edition (for database)
 - Terminal/Command Prompt access
 
-### Who Should Use This Manual
+### 1.2 Who Should Use This Manual
 
 This manual is designed for:
 - **Employees** - For day-to-day HR tasks (leave applications, profile updates, performance reviews)
@@ -48,11 +48,11 @@ This manual is designed for:
 - **IT Support** - For installation, troubleshooting, and maintenance
 
 
-## Getting Started
+## 2. Getting Started
 
-### System Access
+### 2.1 System Access
 
-#### First Time Login
+#### 2.1.1 First Time Login
 
 1. Launch the RevWorkForce application from your terminal/command prompt
 2. You will see the login screen:
@@ -83,7 +83,7 @@ Employee: EMP001 / password123
 >[!WARNING]
 >Change your password immediately after first login!
 
-#### Login Troubleshooting
+#### 2.1.2 Login Troubleshooting
 
 **Problem:** "Invalid credentials" error  
 **Solution:** 
@@ -94,7 +94,7 @@ Employee: EMP001 / password123
 **Problem:** "Account is inactive"  
 **Solution:** Contact your system administrator to reactivate your account
 
-### Understanding the Interface
+### 2.1.3 Understanding the Interface
 
 After successful login, you'll see a menu based on your role:
 
@@ -135,7 +135,7 @@ Enter your choice: ___
 - Enter 0 to return to previous menu or logout
 - The system will guide you through each process
 
-### Changing Your Password
+### 2.1.4 Changing Your Password
 
 **For Security:** Change your password after first login
 
@@ -154,7 +154,7 @@ Enter your choice: ___
 > [!TIP]
 > Use a strong password combining letters, numbers, and special characters
 
-### Logging Out
+### 2.1.5 Logging Out
 
 To safely exit the system:
 1. From any menu, select **[0] Logout**
@@ -166,7 +166,7 @@ To safely exit the system:
 
 ---
 
-### Leave Types
+### 2.1.6 Leave Types
 
 The system supports multiple leave types:
 
@@ -181,13 +181,13 @@ The system supports multiple leave types:
 > [!TIP]
 > Check with your HR department for your organization's specific leave policies
 
-## User Roles & Permissions
+## 3. User Roles & Permissions
 
-### Role Hierarchy
+### 3.1 Role Hierarchy
 
 <img width="1473" height="764" alt="image" src="https://github.com/user-attachments/assets/a14ce73b-7c02-4009-8990-7072a68667c6" />
 
-### Employee Role
+### 3.2 Employee Role
 
 **What Employees Can Do:**
 
@@ -222,7 +222,7 @@ The system supports multiple leave types:
 
 ---
 
-### Manager Role
+### 3.3 Manager Role
 
 **Managers have all Employee capabilities PLUS:**
 
@@ -250,7 +250,7 @@ The system supports multiple leave types:
 
 ---
 
-### Administrator Role
+### 3.4 Administrator Role
 
 **Administrators have all Manager capabilities PLUS:**
 
@@ -278,11 +278,11 @@ The system supports multiple leave types:
 
 ---
 
-## Employee User Guide
+## 4. Employee User Guide
 
-### Managing Your Profile
+### 4.1 Managing Your Profile
 
-#### Viewing Your Profile
+#### 4.1.1 Viewing Your Profile
 
 **Steps:**
 1. Login to the system
@@ -314,7 +314,7 @@ System Access:
 ================================================
 ```
 
-#### Updating Your Profile
+#### 4.1.2 Updating Your Profile
 
 Employees can update certain profile fields:
 
@@ -349,9 +349,9 @@ Confirm changes? (Y/N): Y
 > [!TIP]
 > You cannot update your name, email, department, or designation. Contact HR for these changes.
 
-### Leave Management
+### 4.2 Leave Management
 
-#### Checking Leave Balance
+#### 4.2.1 Checking Leave Balance
 
 **Steps:**
 1. Select **[3] View Leave Balance**
@@ -376,7 +376,7 @@ TOTAL               57     9      48
 > [!NOTE]
 > Balances are updated in real-time when leaves are approved
 
-#### Applying for Leave
+#### 4.2.2. Applying for Leave
 
 **Steps:**
 1. Select **[4] Apply for Leave**
@@ -442,7 +442,7 @@ Confirm application? (Y/N): Y
 - Dates are in the past or end date is before start date
 - Solution: Enter correct dates
 
-#### Viewing Leave Applications
+#### 4.2.3 Viewing Leave Applications
 
 **Steps:**
 1. Select **[5] View My Leave Applications**
@@ -471,7 +471,7 @@ Pending: 1 | Approved: 2 | Rejected: 0
 - **REJECTED**: Manager rejected with comments
 - **CANCELLED**: You cancelled the application
 
-#### Cancelling Pending Leave
+#### 4.2.4 Cancelling Pending Leave
 
 You can only cancel PENDING leaves (not yet approved/rejected):
 
@@ -504,7 +504,7 @@ Are you sure you want to cancel this leave? (Y/N): Y
 > [!NOTE]
 > You cannot cancel APPROVED or REJECTED leaves. Contact your manager.
 
-#### Viewing Holiday Calendar
+#### 4.2.5 Viewing Holiday Calendar
 
 **Steps:**
 1. Select **[7] View Holiday Calendar**
@@ -533,9 +533,9 @@ Total Holidays: 8
 > [!NOTE]
 > These holidays are automatically excluded when calculating working days
 
-### Performance Management
+### 4.3 Performance Management
 
-#### Creating Performance Review
+#### 4.3.1 Creating Performance Review
 
 Performance reviews are typically done annually. You'll create a self-assessment that your manager will review.
 
@@ -593,7 +593,7 @@ Choose option: 2
 > [!NOTE]
 > Be honest and specific in your self-assessment. Provide concrete examples.
 
-#### Viewing Performance Reviews
+#### 4.3.2 Viewing Performance Reviews
 
 **Steps:**
 1. Select **[9] View Performance Reviews**
@@ -641,9 +641,9 @@ Reviewed Date: 2026-01-15
 ================================================
 ```
 
-### Goal Management
+### 4.4 Goal Management
 
-#### Creating Goals
+#### 4.4.1 Creating Goals
 
 Set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound):
 
@@ -685,7 +685,7 @@ Success Metrics:
 ================================================
 ```
 
-#### Updating Goal Progress
+#### 4.4.2 Updating Goal Progress
 
 Track your progress regularly:
 
@@ -728,9 +728,9 @@ Manager Comments (if any): Great progress! Keep it up!
 > [!NOTE]
 > Update your goals monthly to stay on track
 
-### Notifications
+### 4.5 Notifications
 
-#### Viewing Notifications
+#### 4.5.1 Viewing Notifications
 
 **Steps:**
 1. Select **[12] View Notifications**
@@ -776,11 +776,11 @@ Mark all as read? (Y/N): Y
 
 ---
 
-## Manager User Guide
+## 5. Manager User Guide
 
-### Team Management
+### 5.1 Team Management
 
-#### Viewing Team Members
+#### 5.1.1 Viewing Team Members
 
 **Steps:**
 1. Login as Manager
@@ -804,7 +804,7 @@ Active: 4 | Inactive: 0
 ================================================
 ```
 
-#### Viewing Team Leave Calendar
+#### 5.1.2 Viewing Team Leave Calendar
 
 See all team leaves at a glance:
 
@@ -836,9 +836,9 @@ Team Coverage: 75% available on 2026-03-15
 > [!TIP]
 > Use this to ensure adequate team coverage before approving leaves
 
-### Leave Approval
+### 5.2 Leave Approval
 
-#### Viewing Pending Leave Requests
+#### 5.2.1 Viewing Pending Leave Requests
 
 **Steps:**
 1. Select **[View Pending Leaves]**
@@ -859,7 +859,7 @@ Total Pending: 3
 ================================================
 ```
 
-#### Approving Leave
+#### 5.2.2 Approving Leave
 
 **Steps:**
 1. From pending leaves list, enter **Application ID**
@@ -907,7 +907,7 @@ Approve this leave? (Y/N): Y
 - Communicate with team about leaves
 - Add meaningful comments for record
 
-#### Rejecting Leave
+#### 5.2.3 Rejecting Leave
 
 **Steps:**
 1. From pending leaves list, enter **Application ID**
@@ -943,9 +943,9 @@ Reject this leave? (Y/N): Y
 > [!NOTE]
 > **Important:** Always provide clear, constructive comments when rejecting
 
-### Performance Reviews
+### 5.3 Performance Reviews
 
-#### Reviewing Team Performance
+#### 5.3.1 Reviewing Team Performance
 
 **Steps:**
 1. Select **[Pending Reviews]**
@@ -1013,7 +1013,7 @@ Submit Review? (Y/N): Y
 - Discuss with employee in person
 - Document everything
 
-#### Viewing Team Goals
+#### 5.3.2 Viewing Team Goals
 
 **Steps:**
 1. Select **[View Team Goals]**
@@ -1053,11 +1053,11 @@ Bob Johnson   Test Automation       2026-12-31   40%   Needs Focus
 
 ---
 
-## Administrator User Guide
+## 6. Administrator User Guide
 
-### Employee Management
+### 6.1 Employee Management
 
-#### Adding New Employee
+#### 6.1.1 Adding New Employee
 
 **Steps:**
 1. Select **[Add New Employee]** from Admin menu
@@ -1136,7 +1136,7 @@ Confirm creation? (Y/N): Y
 > [!WARNING]
 > **Security:** Never share passwords via email. Use secure communication channels.
 
-#### Updating Employee Information
+#### 6.1.2 Updating Employee Information
 
 **Steps:**
 1. Select **[Update Employee]**
@@ -1186,7 +1186,7 @@ Confirm updates? (Y/N): Y
 ================================================
 ```
 
-#### Deactivating Employee
+#### 6.1.3 Deactivating Employee
 
 When an employee leaves:
 
@@ -1233,7 +1233,7 @@ Confirm deactivation? (Y/N): Y
 > [!NOTE]
 > Deactivated employees' data is preserved for compliance and reporting
 
-#### Assigning Roles
+#### 6.1.4 Assigning Roles
 
 **Steps:**
 1. Select **[Assign Roles]**
@@ -1273,9 +1273,9 @@ Confirm role assignment? (Y/N): Y
 ================================================
 ```
 
-### Leave Configuration
+### 6.2 Leave Configuration
 
-#### Assigning Leave Balances
+#### 6.2.1 Assigning Leave Balances
 
 At the start of each year, assign leave balances:
 
@@ -1327,7 +1327,7 @@ Processing...
 ================================================
 ```
 
-#### Adding Holidays
+#### 6.2.2 Adding Holidays
 
 **Steps:**
 1. Select **[Add Holiday]**
@@ -1351,9 +1351,9 @@ Confirm? (Y/N): Y
 ================================================
 ```
 
-### System Management
+### 6.3 System Management
 
-#### Creating Announcements
+#### 6.3.1 Creating Announcements
 
 **Steps:**
 1. Select **[Create Announcement]**
@@ -1387,7 +1387,7 @@ Confirm? (Y/N): Y
 ================================================
 ```
 
-#### Viewing Audit Logs
+#### 6.3.2 Viewing Audit Logs
 
 **Steps:**
 1. Select **[View Audit Logs]**
@@ -1439,7 +1439,7 @@ Export to CSV? (Y/N): N
 
 ---
 
-## Common Tasks
+## 7. Common Tasks
 
 ### How to Apply for Emergency Leave
 
@@ -1600,7 +1600,7 @@ Rating: 4.0 (Exceeds Expectations)
 
 ---
 
-## Troubleshooting
+## 8 Troubleshooting
 
 ### Login Issues
 
@@ -1656,7 +1656,7 @@ Rating: 4.0 (Exceeds Expectations)
 
 ---
 
-## Glossary
+## 9. Glossary
 
 - **Administrator (Admin)**: System user with full access to all features and configuration settings.
 - **Audit Log**: Record of all actions performed in the system, used for compliance and security.
@@ -1683,7 +1683,7 @@ Rating: 4.0 (Exceeds Expectations)
 
 ---
 
-## Appendices
+## 10. Appendices
 
 ### Appendix A: Default Credentials
 
@@ -1742,6 +1742,7 @@ Rating: 4.0 (Exceeds Expectations)
 | Ctrl+C | Cancel operation (force exit) |
 
 
+---
 
 ## Document Version History
 
