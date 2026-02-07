@@ -16,9 +16,9 @@
 ##  Welcome to RevWorkForce 
 Rev Workforce is a **console-based** Human Resource Management (HRM) application designed to streamline **employee management, leave tracking, and performance review processes**. 
 The system supports three user roles: 
-1. **Employees:**   [(Employee Manual)](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#4-employee-user-guide)
-2. **Managers:**    [(Manager Manual)](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#5-manager-user-guide)
-3. **Admins:**      [(Admin Manual)](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#6-administrator-user-guide)
+1. **Employees**  
+2. **Managers**  
+3. **Admins**    
 
 Each with specific functionalities. The application is designed with a **modular architecture** that can be extended to a microservices-based application in future phases.
 
