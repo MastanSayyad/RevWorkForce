@@ -65,7 +65,7 @@ public class AdminMenu {
                 switch (choice) {
                 case 1:
                     managerMenu.display();
-                    running = false;
+//                    running = false;
                     break;
                 case 2:
                     viewAllEmployees();

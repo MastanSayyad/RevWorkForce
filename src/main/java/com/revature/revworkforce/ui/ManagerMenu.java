@@ -57,7 +57,7 @@ public class ManagerMenu {
                     case 1:
                         // Delegate to employee menu
                         employeeMenu.display();
-                        running = false; // Return to main menu after employee menu
+//                        running = false; // Return to main menu after employee menu
                         break;
                     case 2:
                         viewTeamMembers();
