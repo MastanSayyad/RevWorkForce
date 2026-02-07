@@ -8,14 +8,13 @@ import org.junit.jupiter.api.Test;
 
 import com.revature.revworkforce.exception.AuthenticationException;
 import com.revature.revworkforce.model.Employee;
-import org.junit.jupiter.api.Disabled;
-
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
 
 /**
  * Test class for AuthService
  */
 
-//@Disabled("Integration test – requires database")
 
 public class AuthServiceTest {
     
