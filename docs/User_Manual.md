@@ -185,7 +185,7 @@ The system supports multiple leave types:
 
 ### 3.1 Role Hierarchy
 
-<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/RevWorkForce_Role_Hierarchy.png" />
+<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Role_Hierarchy.png" />
 
 ### 3.2 Employee Role
 
