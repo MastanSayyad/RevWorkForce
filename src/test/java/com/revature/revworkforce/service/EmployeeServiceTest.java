@@ -2,6 +2,8 @@ package com.revature.revworkforce.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,8 +20,9 @@ import com.revature.revworkforce.model.Employee;
  * Test class for EmployeeService
  */
 
-import org.junit.jupiter.api.Disabled;
-//@Disabled("Integration test – requires database")
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 public class EmployeeServiceTest {
     
     private EmployeeService employeeService;
