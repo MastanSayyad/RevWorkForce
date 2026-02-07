@@ -62,15 +62,7 @@
             <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
-        
-        <!-- H2 In-Memory Database (for tests / CI) -->
-		<dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <version>2.2.224</version>
-		    <scope>test</scope>
-		</dependency>
-
+      
     </dependencies>
     
     <build>
