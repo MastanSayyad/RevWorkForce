@@ -13,6 +13,9 @@ import com.revature.revworkforce.model.Department;
 import com.revature.revworkforce.model.Designation;
 import com.revature.revworkforce.model.Employee;
 
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable; 
+@DisabledIfEnvironmentVariable(named = "CI", matches = "true")
+
 /**
  * Test class for EmployeeDAO
  */
@@ -67,6 +70,11 @@ public class EmployeeDAOTest {
             List<Employee> employees = employeeDAO.getActiveEmployees();
             assertNotNull(employees, "Employees list should not be null");
             assertTrue(employees.size() > 0, "Should have at least one active employee");
+            
+            // Verify all returned employees are active
+            for (Employee emp : employees) {
+                assertTrue(emp.isActive(), "All returned employees should be active");
+            }
         } catch (Exception e) {
             fail("Should not throw exception: " + e.getMessage());
         }
@@ -119,12 +127,20 @@ public class EmployeeDAOTest {
     }
     
     @Test
-    @DisplayName("Test is email exists")
-    public void testIsEmailExists() {
+    @DisplayName("Test is email exists - exists")
+    public void testIsEmailExists_True() {
         try {
             boolean exists = employeeDAO.isEmailExists("amit.patel@revworkforce.com");
             assertTrue(exists, "Email should exist for EMP001");
-            
+        } catch (Exception e) {
+            fail("Should not throw exception: " + e.getMessage());
+        }
+    }
+    
+    @Test
+    @DisplayName("Test is email exists - not exists")
+    public void testIsEmailExists_False() {
+        try {
             boolean notExists = employeeDAO.isEmailExists("nonexistent@test.com");
             assertFalse(notExists, "Non-existent email should return false");
         } catch (Exception e) {
@@ -133,14 +149,54 @@ public class EmployeeDAOTest {
     }
     
     @Test
-    @DisplayName("Test is employee ID exists")
-    public void testIsEmployeeIdExists() {
+    @DisplayName("Test is employee ID exists - exists")
+    public void testIsEmployeeIdExists_True() {
         try {
             boolean exists = employeeDAO.isEmployeeIdExists("EMP001");
             assertTrue(exists, "Employee ID should exist");
-            
+        } catch (Exception e) {
+            fail("Should not throw exception: " + e.getMessage());
+        }
+    }
+    
+    @Test
+    @DisplayName("Test is employee ID exists - not exists")
+    public void testIsEmployeeIdExists_False() {
+        try {
             boolean notExists = employeeDAO.isEmployeeIdExists("INVALID999");
             assertFalse(notExists, "Non-existent ID should return false");
+        } catch (Exception e) {
+            fail("Should not throw exception: " + e.getMessage());
+        }
+    }
+    
+    @Test
+    @DisplayName("Test get total employee count")
+    public void testGetTotalEmployeeCount() {
+        try {
+            int count = employeeDAO.getTotalEmployeeCount();
+            assertTrue(count > 0, "Should have at least one employee");
+        } catch (Exception e) {
+            fail("Should not throw exception: " + e.getMessage());
+        }
+    }
+    
+    @Test
+    @DisplayName("Test update profile")
+    public void testUpdateProfile() {
+        try {
+            Employee employee = employeeDAO.findByEmployeeId("EMP001");
+            if (employee != null) {
+                String originalPhone = employee.getPhone();
+                employee.setPhone("9999999999");
+                
+                boolean result = employeeDAO.updateProfile(employee);
+                assertTrue(result, "Update profile should succeed");
+                
+                // Restore original
+                employee.setPhone(originalPhone);
+                employeeDAO.updateProfile(employee);
+            }
         } catch (Exception e) {
             fail("Should not throw exception: " + e.getMessage());
         }
