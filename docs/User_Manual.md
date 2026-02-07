@@ -7,32 +7,22 @@
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Getting Started](#2-getting-started)
-3. [System Overview](#3-system-overview)
-4. [User Roles & Permissions](#4-user-roles--permissions)
-5. [Employee User Guide](#5-employee-user-guide)
-6. [Manager User Guide](#6-manager-user-guide)
-7. [Administrator User Guide](#7-administrator-user-guide)
-8. [Common Tasks](#8-common-tasks)
-9. [Troubleshooting](#9-troubleshooting)
-10. [FAQs](#10-frequently-asked-questions)
-11. [Glossary](#11-glossary)
-12. [Appendices](#12-appendices)
+1. [About RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#about-revworkforce)
+2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#getting-started)
+4. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#user-roles--permissions)
+5. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#employee-user-guide)
+6. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#manager-user-guide)
+7. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#administrator-user-guide)
+8. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#common-tasks)
+9. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#troubleshooting)
+11. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#glossary)
+12. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#appendices)
 
 ---
 
 ### About RevWorkForce
 
 RevWorkForce is a comprehensive Human Resource Management (HRM) system designed to streamline and automate HR processes within organizations. The system provides a centralized platform for managing employees, leave applications, performance reviews, and organizational goals.
-
-**Key Benefits:**
-- Centralized employee information management
-- Automated leave tracking and approval workflows
-- Structured performance review process
-- Goal setting and progress tracking
-- Real-time notifications and alerts
-- Complete audit trail for compliance
 
 ### System Requirements
 
@@ -230,6 +220,8 @@ The system supports multiple leave types:
 - View other employees' data
 - Access admin functions
 
+---
+
 ### Manager Role
 
 **Managers have all Employee capabilities PLUS:**
@@ -256,7 +248,9 @@ The system supports multiple leave types:
 - View audit logs
 - Access other teams' data (only their direct reports)
 
-### 4.4 Administrator Role
+---
+
+### Administrator Role
 
 **Administrators have all Manager capabilities PLUS:**
 
@@ -1466,6 +1460,8 @@ For urgent situations:
 > [!TIP]
 > Always inform your manager, even if applying through system
 
+---
+
 ### How to Handle Leave Balance Discrepancies
 
 If your balance doesn't match your records:
@@ -1482,6 +1478,8 @@ If your balance doesn't match your records:
    - Provide application IDs
    - Mention expected vs actual balance
 
+---
+
 ### How to Request Password Reset
 
 If you forget your password:
@@ -1495,6 +1493,8 @@ If you forget your password:
 > [!WARNING]
 > **Security:** Never share your password with anyone, including administrators
 
+---
+
 ### How to Handle Rejected Leave
 
 If your leave is rejected:
@@ -1505,6 +1505,8 @@ If your leave is rejected:
    - **Re-apply** for different dates
    - **Discuss with manager** for alternatives
    - **Escalate to HR** if you believe rejection is unfair
+
+---
 
 ### How to Track Goal Progress
 
@@ -1526,6 +1528,8 @@ Best practices for goal management:
    - Discuss challenges
    - Seek support if needed
    - Celebrate milestones
+
+---
 
 ### How to Prepare Performance Review
 
@@ -1650,6 +1654,7 @@ Rating: 4.0 (Exceeds Expectations)
 1. For emergency past leave, contact HR
 2. Apply for future dates only
 
+---
 
 ## Glossary
 
@@ -1759,7 +1764,7 @@ Rating: 4.0 (Exceeds Expectations)
 
 
 <p align="right">
-  <a href="https://github.com/MastanSayyad/RevWorkForce/">
+  <a href="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md">
     <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=ffffff" />
   </a>
 </p>
