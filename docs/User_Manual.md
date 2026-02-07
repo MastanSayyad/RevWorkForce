@@ -7,20 +7,20 @@
 
 ## Table of Contents
 
-1. [About RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#about-revworkforce)
-2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#getting-started)
-4. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#user-roles--permissions)
-5. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#employee-user-guide)
-6. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#manager-user-guide)
-7. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#administrator-user-guide)
-8. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#common-tasks)
-9. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#troubleshooting)
-11. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#glossary)
-12. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#appendices)
+1. [RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#1-revworkforce)
+2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#2-getting-started)
+3. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#3-user-roles--permissions)
+4. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#4-employee-user-guide)
+5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#5-manager-user-guide)
+6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#6-administrator-user-guide)
+7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#7-common-tasks)
+8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#8-troubleshooting)
+9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#9-glossary)
+10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#10-appendices)
 
 ---
 
-### 1. About RevWorkForce
+### 1. RevWorkForce
 
 RevWorkForce is a comprehensive Human Resource Management (HRM) system designed to streamline and automate HR processes within organizations. The system provides a centralized platform for managing employees, leave applications, performance reviews, and organizational goals.
 
