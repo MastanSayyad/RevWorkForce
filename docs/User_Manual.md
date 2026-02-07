@@ -1,4 +1,4 @@
-<img width="1473" height="764" alt="image" src="https://github.com/user-attachments/assets/dd373721-d72a-4cd9-90b4-e560c5580e7e" /># RevWorkForce User Manual & Documentation
+# RevWorkForce User Manual & Documentation
 
 **Version:** v1.2.1  
 **Last Updated:** February 2026  
