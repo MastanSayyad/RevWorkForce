@@ -313,11 +313,11 @@ mvn jacoco:report
 
 
 <p align="right">
-  <a href="#top">
+  <a href="https://github.com/MastanSayyad/RevWorkForce?tab=readme-ov-file#top">
     <img 
       src="https://github.com/user-attachments/assets/c739895c-9004-4c9b-95aa-148c8d595250" 
       alt="go to top"
-      width="50"
+      width="40"
     />
   </a>
 </p>
