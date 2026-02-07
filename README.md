@@ -65,10 +65,10 @@ RevWorkForce/
 ## Architecture 모
 
 ### Entity Relationship Diagram (ERD)
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
 
 ### Application Architecture
-![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
+![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Layered-Architecture.png)
 
 > [!TIP]
 > RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
