@@ -192,7 +192,7 @@ sqlplus system/password@localhost:1521/XEPDB1
 > [!CAUTION]
 > Running these scripts on an existing schema may overwrite data.
 
-### 3. Configure Database Connection
+### 3. Configure Database Connection ⛁
 
 Edit `src/main/resources/db.properties`:
 ```properties
