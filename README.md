@@ -84,7 +84,7 @@ The application follows a layered architecture pattern:
 ## Technology Stack **</>**
 
 #### Backend
-- **Java 11** - Core programming language
+- **Java 11 or Higher** - Core programming language
 - **JDBC** - Database connectivity
 - **Maven** - Build and dependency management
 - **Log4j 2** - Logging framework
@@ -315,7 +315,7 @@ mvn jacoco:report
 <p align="right">
   <a href="#top">
     <img 
-      src="https://github.com/user-attachments/assets/de57b58f-3ce5-4095-bbf7-963e0ef75374" 
+      src="https://github.com/user-attachments/assets/c739895c-9004-4c9b-95aa-148c8d595250" 
       alt="go to top"
       width="50"
     />
