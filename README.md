@@ -312,18 +312,18 @@ mvn jacoco:report
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
 
 
-
-
-
 <p align="right">
-  <a href="#top">
+  <a href="https://github.com/MastanSayyad/RevWorkForce">
     <img 
-      src="https://github.com/user-attachments/assets/0d336152-8f57-44e2-a886-c8b37bd1d4f0" 
-      alt="Scroll to Top"
-      width="40"
+      src="https://github.com/user-attachments/assets/de57b58f-3ce5-4095-bbf7-963e0ef75374" 
+      alt="go to top"
+      width="50"
     />
   </a>
 </p>
+
+
+
 
 
 
