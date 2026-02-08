@@ -65,7 +65,7 @@ RevWorkForce/
 ## Methodologies ᵎ!ᵎ
 
 > [!NOTE]
-> RevWorkForce follows an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds features or refines existing functionality.
+> RevWorkForce follows agile practices anf an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds features or refines existing functionality.
 
 ### Iterative Incremental Model
 <img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/SDLC-Model.png" />
