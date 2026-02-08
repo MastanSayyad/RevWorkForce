@@ -1746,9 +1746,20 @@ Rating: 4.0 (Exceeds Expectations)
 
 ## Document Version History
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | Feb 2026 | System Team | Initial release |
+| Version | Date     | Author        | Changes                                                                      |
+| ------- | -------- | ------------- | ---------------------------------------------------------------------------- |
+| 0.1.0   | Jan 2026 | Mastan Sayyad | Initial project setup, utilities, custom exceptions, and console entry point |
+| 0.2.0   | Jan 2026 | Mastan Sayyad | Layered architecture design, console UI, and application execution flow      |
+| 0.3.0   | Jan 2026 | Mastan Sayyad | Database schema design, ER diagram, and Oracle JDBC connectivity             |
+| 0.4.0   | Jan 2026 | Mastan Sayyad | Model (POJO) layer implementation for all core business entities             |
+| 0.5.0   | Jan 2026 | Mastan Sayyad | DAO layer implementation using JDBC and PreparedStatements                   |
+| 0.6.0   | Jan 2026 | Mastan Sayyad | Performance, Goal Management, Notifications, and Service layer (Beta)        |
+| 1.0.0   | Jan 2026 | Mastan Sayyad | Initial stable release with complete role-based console UI                   |
+| 1.0.1   | Jan 2026 | Mastan Sayyad | Bug fix for password persistence and minor stability improvements            |
+| 1.1.0   | Feb 2026 | Mastan Sayyad | CI/CD stabilization, expanded JUnit tests, JaCoCo coverage integration       |
+| 1.2.0   | Feb 2026 | Mastan Sayyad | Audit logging, authentication enhancements, and admin audit features         |
+| 1.2.1   | Feb 2026 | Mastan Sayyad | Feature enhancements, test coverage improvements, documentation updates      |
+
 
 ---
 
