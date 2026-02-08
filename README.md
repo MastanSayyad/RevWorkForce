@@ -1,6 +1,6 @@
 [![Release](https://img.shields.io/badge/Version-v1.2.2-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 <div align="center">
-<img width="450"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/revworkforce-gif.gif" />
+<img width="450"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Logo/revworkforce-gif.gif" />
 <br>
   <br>
 
@@ -68,7 +68,7 @@ RevWorkForce/
 > RevWorkForce follows agile practices and an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds new features or refines existing functionality.
 
 ### Iterative Incremental Model
-<img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/SDLC-Model.png" />
+<img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/SDLC-Model.png" />
 <br>
 
 - **Modular Architecture:** The project has three distinct modules (Authentication, Leave Management, Performance Management)
@@ -80,10 +80,10 @@ RevWorkForce/
 ## Architecture 모
 
 ### Entity Relationship Diagram (ERD)
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/ER-Diagram.png)
 
 ### Application Architecture
-![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Layered-Architecture.png)
+![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Layered-Architecture.png)
 
 > [!TIP]
 > RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
@@ -291,15 +291,15 @@ mvn jacoco:report
 <table align="center">
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Burn-Up-Chart.png" width="95%" />
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Burn-Up-Chart.png" width="95%" />
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Sprint-Board.png" width="95%" />
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Sprint-Board.png" width="95%" />
     </td>
     <td align="center">
-      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Contribution-Timeline.png" width="95%" />
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Contribution-Timeline.png" width="95%" />
     </td>
   </tr>
 </table>
@@ -342,10 +342,10 @@ mvn jacoco:report
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
 - [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
 - [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
-- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
+- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Presentation_RevWorkForce.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
 - [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
-- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs) - *Architecture diagrams, ERD, and system design visuals*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs/Diagrams%20and%20Charts) - *Architecture and UML diagrams, ERD, and system design visuals*
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
 
 
