@@ -62,13 +62,28 @@ RevWorkForce/
 └── pom.xml                             # Maven Configuration
 ```
 
+## Methodologies ᵎ!ᵎ
+
+> [!NOTE]
+> RevWorkForce follows an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds features or refines existing functionality.
+
+### Iterative Incremental Model
+<img width="1566" height="719" alt="image" src="https://github.com/user-attachments/assets/11f34dab-1bf3-46a2-b733-012ae202141c" />
+<br>
+
+- **Modular Architecture:** The project has three distinct modules (Authentication, Leave Management, Performance Management)
+- **Role-based Development:** Features can be developed incrementally for Employee → Manager → Admin
+- **Continuous Testing:** Each iteration can be tested independently
+- **Flexibility:** Requirements can be refined based on stakeholder feedback
+- **Risk Mitigation:** Core features are developed first, reducing project risk
+
 ## Architecture 모
 
 ### Entity Relationship Diagram (ERD)
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
 
 ### Application Architecture
-![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-Layered-Architecture.png)
+![Architecture Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Layered-Architecture.png)
 
 > [!TIP]
 > RevWorkForce follows a clean layered architecture, making it easy to extend into a web or microservices-based application.
@@ -304,17 +319,17 @@ mvn jacoco:report
 **For more information, see:**
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
 - [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
-- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
+- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
 - [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
-- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Application workflows and module interactions*
-- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Architecture diagrams, ERD, and system design visuals*
-- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
+- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs) - *Architecture diagrams, ERD, and system design visuals*
+- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
 
 
 <p align="right">
   <a href="https://github.com/MastanSayyad/RevWorkForce/">
-    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=800080" />
+    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=FFA500" />
   </a>
 </p>
 

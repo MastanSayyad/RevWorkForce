@@ -185,7 +185,7 @@ The system supports multiple leave types:
 
 ### 3.1 Role Hierarchy
 
-<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/RevWorkForce_Role_Hierarchy.png" />
+<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Role_Hierarchy.png" />
 
 ### 3.2 Employee Role
 
@@ -1753,15 +1753,16 @@ Rating: 4.0 (Exceeds Expectations)
 ---
 
 **END OF USER MANUAL**
+
 **For more information, see:**
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
 - [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
-- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md#prerequisites-) - *Step-by-step project build and usage guide Instructions*
+- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
 - [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
-- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Application workflows and module interactions*
-- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - *Architecture diagrams, ERD, and system design visuals*
-- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Test strategy, coverage details, and reports*
+- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs) - *Architecture diagrams, ERD, and system design visuals*
+- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
 
 
 <p align="right">

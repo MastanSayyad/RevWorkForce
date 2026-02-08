@@ -34,7 +34,7 @@
 
 ### Entity Relationship Overview
 
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/RevWorkForce-ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
 
 ## Table Definitions
 
@@ -504,4 +504,19 @@ COMMIT;
 ---
 
 **For more information, see:**
-- [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - Project overview
+- [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
+- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
+- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
+- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
+- [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
+- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs) - *Architecture diagrams, ERD, and system design visuals*
+- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
+
+
+<p align="right">
+  <a href="https://github.com/MastanSayyad/RevWorkForce/edit/main/docs/Database_Design_Documentation.md">
+    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=ffffff" />
+  </a>
+</p>
+
