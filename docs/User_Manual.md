@@ -7,16 +7,16 @@
 
 ## Table of Contents
 
-1. [RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#1-revworkforce)
-2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#2-getting-started)
-3. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#3-user-roles--permissions)
-4. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#4-employee-user-guide)
-5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#5-manager-user-guide)
-6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#6-administrator-user-guide)
-7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#7-common-tasks)
-8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/buserlob/docs/docs/User_Manual.md#8-troubleshooting)
-9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#9-glossary)
-10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#10-appendices)
+1. [RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#1-revworkforce)
+2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#2-getting-started)
+3. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#3-user-roles--permissions)
+4. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#4-employee-user-guide)
+5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#5-manager-user-guide)
+6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#6-administrator-user-guide)
+7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#7-common-tasks)
+8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/buserlob/main/docs/User_Manual.md#8-troubleshooting)
+9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#9-glossary)
+10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#10-appendices)
 
 ---
 
@@ -201,7 +201,7 @@ The system supports multiple leave types:
 
 ### 3.1 Role Hierarchy
 
-<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Role_Hierarchy.png" />
+<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Role_Hierarchy.png" />
 
 ### 3.2 Employee Role
 
