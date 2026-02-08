@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/Version-v1.2.1-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
+[![Release](https://img.shields.io/badge/Version-v1.2.2-white?logo=github&style=flat)](https://github.com/MastanSayyad/RevWorkForce/releases)
 <div align="center">
 <img width="450"alt="Rev WorkForce logo" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/revworkforce-gif.gif" />
 <br>
@@ -65,7 +65,7 @@ RevWorkForce/
 ## Methodologies ᵎ!ᵎ
 
 > [!NOTE]
-> RevWorkForce follows agile practices anf an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds features or refines existing functionality.
+> RevWorkForce follows agile practices and an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds new features or refines existing functionality.
 
 ### Iterative Incremental Model
 <img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/SDLC-Model.png" />
@@ -186,7 +186,7 @@ The application follows a layered architecture pattern:
 
 ### 1. Clone Repository ⿻
 ```bash
-git clone 
+git clone https://github.com/MastanSayyad/RevWorkForce.git
 cd revworkforce
 ```
 
@@ -230,7 +230,7 @@ db.password=password
 | ---------- | ---------------------- | --------------- |
 | groupId    | Company / organization |  com.revature   |
 | artifactId | Project name           |  revworkforce  |
-| version    | Project version        |  0.0.1 SNAPSHOT |
+| version    | Project version        |  0.0.1-SNAPSHOT |
 | packaging  | jar / war              |    jar |
 
 
