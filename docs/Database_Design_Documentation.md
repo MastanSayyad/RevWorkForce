@@ -10,7 +10,6 @@
 - [Indexes](#indexes)
 - [Sequences](#sequences)
 - [Sample Data](#sample-data)
-- [Backup and Recovery](#backup-and-recovery)
 
 ## Overview
 
@@ -34,7 +33,7 @@
 
 ### Entity Relationship Overview
 
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/ER-Diagram.png)
 
 ## Table Definitions
 
