@@ -62,6 +62,21 @@ RevWorkForce/
 └── pom.xml                             # Maven Configuration
 ```
 
+## Methodologies ᵎ!ᵎ
+
+> [!NOTE]
+> RevWorkForce follows an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds features or refines existing functionality.
+
+### Iterative Incremental Model
+<img width="1566" height="719" alt="image" src="https://github.com/user-attachments/assets/11f34dab-1bf3-46a2-b733-012ae202141c" />
+<br>
+
+- **Modular Architecture:** The project has three distinct modules (Authentication, Leave Management, Performance Management)
+- **Role-based Development:** Features can be developed incrementally for Employee → Manager → Admin
+- **Continuous Testing:** Each iteration can be tested independently
+- **Flexibility:** Requirements can be refined based on stakeholder feedback
+- **Risk Mitigation:** Core features are developed first, reducing project risk
+
 ## Architecture 모
 
 ### Entity Relationship Diagram (ERD)
