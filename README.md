@@ -282,6 +282,28 @@ mvn jacoco:report
 <img width="1919" height="485" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/JaCoCo-Report.png" />
 
 
+## Sprint Progress & Development Insights
+
+> [!NOTE]
+> This includes project execution metrics such as **burn-up charts**, **timeline-based contribution analysis**, and **sprint workflow visualization** for monitoring progress and productivity.
+
+
+<table align="center">
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Burn-Up-Chart.png" width="95%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Sprint-Board.png" width="95%" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Contribution-Timeline.png" width="95%" />
+    </td>
+  </tr>
+</table>
+
 ## Author ©
 **This Project is Built and maintained by:** **[Mastan Sayyad](https://github.com/MastanSayyad)**
 
@@ -329,7 +351,7 @@ mvn jacoco:report
 
 <p align="right">
   <a href="https://github.com/MastanSayyad/RevWorkForce/">
-    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=FFA500" />
+    <img src="https://img.shields.io/badge/Scroll%20to%20Top-Purple?style=for-the-badge&color=blue" />
   </a>
 </p>
 
