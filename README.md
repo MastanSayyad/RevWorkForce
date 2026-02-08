@@ -340,7 +340,7 @@ mvn jacoco:report
 
 **For more information, see:**
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
-- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
+- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs) - *Project report including objectives, methodology, and outcomes*
 - [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
 - [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Presentation_RevWorkForce.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
