@@ -65,17 +65,11 @@ RevWorkForce/
 ## Methodologies ᵎ!ᵎ
 
 > [!NOTE]
-> RevWorkForce follows agile practices and an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds new features or refines existing functionality.
+> RevWorkForce follows **agile practices** and an **iterative development approach**, where the development cycle is repeated multiple times. Each **iteration** delivers a new **release** that adds new features or refines existing functionality.
 
 ### Iterative Incremental Model
 <img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/SDLC-Model.png" />
-<br>
 
-- **Modular Architecture:** The project has three distinct modules (Authentication, Leave Management, Performance Management)
-- **Role-based Development:** Features can be developed incrementally for Employee → Manager → Admin
-- **Continuous Testing:** Each iteration can be tested independently
-- **Flexibility:** Requirements can be refined based on stakeholder feedback
-- **Risk Mitigation:** Core features are developed first, reducing project risk
 
 ## Architecture 모
 
