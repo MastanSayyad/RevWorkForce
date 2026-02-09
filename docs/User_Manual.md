@@ -7,22 +7,38 @@
 
 ## Table of Contents
 
-1. [RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#1-revworkforce)
-2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#2-getting-started)
-3. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#3-user-roles--permissions)
-4. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#4-employee-user-guide)
-5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#5-manager-user-guide)
-6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#6-administrator-user-guide)
-7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#7-common-tasks)
-8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/buserlob/docs/docs/User_Manual.md#8-troubleshooting)
-9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#9-glossary)
-10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/docs/docs/User_Manual.md#10-appendices)
+1. [RevWorkForce](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#1-revworkforce)
+2. [Getting Started Knowing System](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#2-getting-started)
+3. [User Roles & Permissions](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#3-user-roles--permissions)
+4. [Employee User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#4-employee-user-guide)
+5. [Manager User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#5-manager-user-guide)
+6. [Administrator User Guide](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#6-administrator-user-guide)
+7. [Common Tasks](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#7-common-tasks)
+8. [Troubleshooting](https://github.com/MastanSayyad/RevWorkForce/buserlob/main/docs/User_Manual.md#8-troubleshooting)
+9. [Glossary](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#9-glossary)
+10. [Appendices](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md#10-appendices)
 
 ---
 
 ### 1. RevWorkForce
 
 RevWorkForce is a comprehensive Human Resource Management (HRM) system designed to streamline and automate HR processes within organizations. The system provides a centralized platform for managing employees, leave applications, performance reviews, and organizational goals.
+
+## Methodologies
+
+> [!NOTE]
+> RevWorkForce follows agile practices and an iterative development approach, where the development cycle is repeated multiple times. Each iteration delivers a new release that adds new features or refines existing functionality.
+
+### Iterative Incremental Model
+<img width="1566" height="719" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/SDLC-Model.png" />
+<br>
+
+- **Modular Architecture:** The project has three distinct modules (Authentication, Leave Management, Performance Management)
+- **Role-based Development:** Features can be developed incrementally for Employee → Manager → Admin
+- **Continuous Testing:** Each iteration can be tested independently
+- **Flexibility:** Requirements can be refined based on stakeholder feedback
+- **Risk Mitigation:** Core features are developed first, reducing project risk
+
 
 ### 1.1 System Requirements
 
@@ -185,7 +201,7 @@ The system supports multiple leave types:
 
 ### 3.1 Role Hierarchy
 
-<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Role_Hierarchy.png" />
+<img width="1473" height="764" alt="image" src="https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/Role_Hierarchy.png" />
 
 ### 3.2 Employee Role
 
@@ -1746,9 +1762,20 @@ Rating: 4.0 (Exceeds Expectations)
 
 ## Document Version History
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | Feb 2026 | System Team | Initial release |
+| Version | Date     | Author        | Changes                                                                      |
+| ------- | -------- | ------------- | ---------------------------------------------------------------------------- |
+| 0.1.0   | Jan 2026 | Mastan Sayyad | Initial project setup, utilities, custom exceptions, and console entry point |
+| 0.2.0   | Jan 2026 | Mastan Sayyad | Layered architecture design, console UI, and application execution flow      |
+| 0.3.0   | Jan 2026 | Mastan Sayyad | Database schema design, ER diagram, and Oracle JDBC connectivity             |
+| 0.4.0   | Jan 2026 | Mastan Sayyad | Model (POJO) layer implementation for all core business entities             |
+| 0.5.0   | Jan 2026 | Mastan Sayyad | DAO layer implementation using JDBC and PreparedStatements                   |
+| 0.6.0   | Jan 2026 | Mastan Sayyad | Performance, Goal Management, Notifications, and Service layer (Beta)        |
+| 1.0.0   | Jan 2026 | Mastan Sayyad | Initial stable release with complete role-based console UI                   |
+| 1.0.1   | Jan 2026 | Mastan Sayyad | Bug fix for password persistence and minor stability improvements            |
+| 1.1.0   | Feb 2026 | Mastan Sayyad | CI/CD stabilization, expanded JUnit tests, JaCoCo coverage integration       |
+| 1.2.0   | Feb 2026 | Mastan Sayyad | Audit logging, authentication enhancements, and admin audit features         |
+| 1.2.1   | Feb 2026 | Mastan Sayyad | Feature enhancements, test coverage improvements, documentation updates      |
+
 
 ---
 

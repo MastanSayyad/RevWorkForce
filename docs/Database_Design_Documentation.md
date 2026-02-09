@@ -10,7 +10,6 @@
 - [Indexes](#indexes)
 - [Sequences](#sequences)
 - [Sample Data](#sample-data)
-- [Backup and Recovery](#backup-and-recovery)
 
 ## Overview
 
@@ -34,7 +33,7 @@
 
 ### Entity Relationship Overview
 
-![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/ER-Diagram.png)
+![ERD Diagram](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Diagrams%20and%20Charts/ER-Diagram.png)
 
 ## Table Definitions
 
@@ -505,13 +504,15 @@ COMMIT;
 
 **For more information, see:**
 - [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
-- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project report including objectives, methodology, and outcomes*
+- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs) - *Project report including objectives, methodology, and outcomes*
 - [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
-- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Project_Report.pdf) - *Project presentation slides*
+- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Presentation_RevWorkForce.pdf) - *Project presentation slides*
 - [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
 - [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
-- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs) - *Architecture diagrams, ERD, and system design visuals*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs/Diagrams%20and%20Charts) - *Architecture and UML diagrams, ERD, and system design visuals*
 - [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
+
+
 
 
 <p align="right">

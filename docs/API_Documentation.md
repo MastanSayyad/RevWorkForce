@@ -885,7 +885,14 @@ int goalId = perfService.createGoal(goal);
 authService.logout();
 ```
 
-
 **For more information, see:**
-- [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - Project overview
-- [DATABASE_DESIGN.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) - Database documentation
+- [README.md](https://github.com/MastanSayyad/RevWorkForce/blob/main/README.md) - *Project overview*
+- [Project Report](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs) - *Project report including objectives, methodology, and outcomes*
+- [User Manual](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/User_Manual.md) - *Step-by-step project build and usage guide Instructions*
+- [PPT Slides](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Presentation_RevWorkForce.pdf) - *Project presentation slides*
+- [Database Design Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Database_Design_Documentation.md) -  *Database schema, ER diagrams, and relationships*
+- [API Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/API_Documentation.md) - *Application workflows and module interactions*
+- [Diagrams & Charts](https://github.com/MastanSayyad/RevWorkForce/tree/main/docs/Diagrams%20and%20Charts) - *Architecture and UML diagrams, ERD, and system design visuals*
+- [Testing Documentation](https://github.com/MastanSayyad/RevWorkForce/blob/main/docs/Testing_Report.pdf) -  *Test strategy, coverage details, and reports*
+
+
